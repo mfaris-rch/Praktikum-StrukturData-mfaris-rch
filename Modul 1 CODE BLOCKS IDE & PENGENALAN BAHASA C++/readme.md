@@ -24,7 +24,7 @@ int main()
 }
 
 > Output
-> ![output](output/aritmatika.png)
+> ![soal](soal/S1.png)
 
 ```
 ### Fungsi
