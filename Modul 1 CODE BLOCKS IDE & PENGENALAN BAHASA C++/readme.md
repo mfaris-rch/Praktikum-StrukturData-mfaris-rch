@@ -77,7 +77,7 @@ int main()
     return 0;
 }
 > Output
-> ![alt text](Modul 1 CODE BLOCKS IDE & PENGENALAN BAHASA C++/output/aritmatika.png?raw=true)
+> ![alt text]([Modul 1 CODE BLOCKS IDE & PENGENALAN BAHASA C++/output/aritmatika.png](https://github.com/mfaris-rch/Praktikum-StrukturData-mfaris-rch/blob/38d674ab56d606f7fa6f5bbd851675eb82de30b7/Modul%201%20CODE%20BLOCKS%20IDE%20%26%20PENGENALAN%20BAHASA%20C%2B%2B/output/aritmatika.png)?raw=true)
 
 
 Penjelasan ttg kode kalian disini
