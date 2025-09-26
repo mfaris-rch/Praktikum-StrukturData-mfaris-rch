@@ -22,7 +22,7 @@ int main()
     cout << "Nilai z = " << Z << endl;
     return 0;
 }
-
+```
 > Output
 > ![alt](soal/S1.png)
 
