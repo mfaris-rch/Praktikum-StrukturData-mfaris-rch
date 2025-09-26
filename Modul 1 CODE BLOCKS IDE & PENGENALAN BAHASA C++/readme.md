@@ -24,7 +24,7 @@ int main()
 }
 
 > Output
-> ![aritmatika](output/aritmatika.png)
+> ![output](output/aritmatika.png)
 
 ```
 ### Fungsi
@@ -77,7 +77,7 @@ int main()
     return 0;
 }
 > Output
-> ![Screenshot bagian x](output/screenshot_soal1.png)
+> ![alt text](?raw=true)
 
 
 Penjelasan ttg kode kalian disini
