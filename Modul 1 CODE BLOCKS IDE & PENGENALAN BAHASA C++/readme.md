@@ -265,7 +265,7 @@ func main() {
 ```
 
 > Output
-> ![Screenshot bagian x](output/screenshot_soal2B.png)
+> ![alt](soal/S1.png)
 
 penjelasan bedanya sesuai soal
 
