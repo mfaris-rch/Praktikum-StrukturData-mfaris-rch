@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul X <br> Nama Modul</h1>
+# <h1 align="center">Laporan Praktikum Modul 1 <br> CODE BLOCKS IDE & PENGENALAN BAHASA C++
 <p align="center">Muhammad Faris Rachmadi - 103112400079</p>
 
 ## Dasar Teori
@@ -134,13 +134,13 @@ int main()
     }
     return 0;
 }
+```
 > Output
-> ![Screenshot bagian x](output/screenshot_soal1.png)
+> ![alt](output/kondisi.png)
 
 
 Penjelasan ttg kode kalian disini
 
-```
 ### Perulangan
 ```c++
 #include <iostream>
@@ -171,12 +171,12 @@ int main()
     } while (i < jum);
     return 0;
 }
+```
 > Output
-> ![Screenshot bagian x](output/aritmatika.png)
-
+> ![alt](output/perulangan.png)
 
 Penjelasan ttg kode kalian disini
-```
+
 ### Struct
 ```c++
 #include <iostream>
@@ -209,12 +209,13 @@ int main() {
 
     return 0;
 }
+```
 > Output
-> ![Screenshot bagian x](output/screenshot_soal1.png)
+> ![alt](output/struct.png)
 
 
 Penjelasan ttg kode kalian disini
-```
+
 ### Test
 ```c++
 #include <iostream>
@@ -228,26 +229,40 @@ int main()
     cout << "Karakter yang Anda masukkan adalah: " << ch << endl;
     return 0;
 }
+```
 > Output
-> ![Screenshot bagian x](output/screenshot_soal1.png)
+> ![alt](output/test.png)
 
 
 Penjelasan ttg kode kalian disini
 
-```
-## Guided
+## UnGuided
 
-### Soal 2
-```go
-package main
+### Soal 1
+> ![alt](soal/S1.png)
+```c++
+#include <iostream>
+using namespace std;
 
-func main() {
-	fmt.Println("kode untuk soal nomor 2A")
+int main(){
+    float x, y;
+
+    cout << "Masukkan Bilangan Pertama: ";
+    cin >> x;
+    cout << "Masukkan Bilangan Kedua: ";
+    cin >> y;
+
+       cout << "\nHasil Operasi:\n";
+    cout << "Penjumlahan      = " << x + y << endl;
+    cout << "Pengurangan      = " << x - y << endl;
+    cout << "Perkalian        = " << x * y << endl;
+    cout << "Pembagian        = " << x / y << endl;
+
+    return 0;
 }
 ```
-
 > Output
-> ![Screenshot bagian x](output/screenshot_soal2A.png)
+> ![alt](output/soal1.png)
 
 penjelasan kode
 
