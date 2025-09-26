@@ -24,8 +24,7 @@ int main()
 }
 
 > Output
-> ![soal](Modul 1 CODE BLOCKS IDE & PENGENALAN BAHASA C++
-/soal/S1.png)
+> ![alt](soal/S1.png)
 
 ```
 ### Fungsi
