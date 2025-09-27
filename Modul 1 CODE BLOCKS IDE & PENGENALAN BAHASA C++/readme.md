@@ -266,22 +266,83 @@ int main(){
 
 penjelasan kode
 
-Kalau adalanjutan di lanjut disini aja
+### Soal 2
+> ![alt](soal/S2.png)
+```c++
+#include <iostream>
+using namespace std;
 
-soal nomor 2B
+int main() {
+    string satuan[] = {"", "satu", "dua", "tiga", "empat", "lima", 
+                       "enam", "tujuh", "delapan", "sembilan"};
+    string puluhan[] = {"", "sepuluh", "dua puluh", "tiga puluh", "empat puluh", 
+                        "lima puluh", "enam puluh", "tujuh puluh", 
+                        "delapan puluh", "sembilan puluh"};
+    
 
-```go
-package main
+    int bil;
+    cout << "Masukkan angka (0-100): ";
+    cin >> bil;
 
-func main() {
-	fmt.Println("kode untuk soal nomor 2B")
+    if (bil == 0) cout << "nol";
+    else if (bil == 10) cout << "sepuluh";
+    else if (bil == 11) cout << "sebelas";
+    else if (bil < 20) cout << satuan[bil - 10] << " belas";      
+    else if (bil < 100) {
+        cout << puluhan[bil / 10];
+        if (bil % 10 != 0) cout << " " << satuan[bil % 10];       
+    }
+    else if (bil == 100) cout << "seratus";
+
+    return 0;
 }
 ```
-
 > Output
-> ![alt](soal/S1.png)
+> ![alt](output/soal2.png)
 
-penjelasan bedanya sesuai soal
+penjelasan kode
+
+### Soal 3
+> ![alt](soal/S3.png)
+```c++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    cout << "Input: ";
+    cin >> a;
+
+    cout << "Output:" << endl;
+    for (int i = a; i >= 1; i--) {
+        for (int s = 0; s < (a - i); s++) {
+            cout << "  "; 
+        }
+        // kiri (turun)
+        for (int j = i; j >= 1; j--) {
+            cout << j << " ";
+        }
+        cout << "* "; 
+        for (int j = 1; j <= i; j++) {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+
+    for (int s = 0; s < a; s++) {
+        cout << "  "; // spasi ganda
+    }
+    cout << "*" << endl;
+
+    return 0;
+}
+```
+> Output
+> ![alt](output/soal3.png)
+
+penjelasan kode
+
+
 
 ## Referensi
 
