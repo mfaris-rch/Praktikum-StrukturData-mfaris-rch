@@ -26,6 +26,7 @@ int main()
 ```
 > Output
 > ![alt](output/aritmatika.png)
+> Program di atas merupakan program sederhana dalam bahasa C++ yang melakukan operasi aritmatika menggunakan variabel bertipe integer dan float. Variabel X, Y, dan W didefinisikan sebagai integer, lalu diberi nilai masing-masing X = 7, Y = 3, dan W = 1. Kemudian variabel Z bertipe float digunakan untuk menyimpan hasil perhitungan (X + Y) / (Y + W). Karena X + Y = 10 dan Y + W = 4, maka hasil pembagian adalah 10 / 4 = 2 (hasilnya integer karena operasi dilakukan antar bilangan bulat), lalu disimpan ke dalam variabel float Z, sehingga Z bernilai 2.0. Program kemudian menampilkan hasil tersebut di layar dengan perintah cout, sehingga output yang muncul adalah "Nilai z = 2"
 
 ### Fungsi
 ```c++
@@ -79,9 +80,7 @@ int main()
 ```
 > Output
 > ![alt](output/fungsi.png)
-
-Penjelasan ttg kode kalian disini
-
+> Program C++ di atas digunakan untuk menghitung luas dan keliling persegi panjang dengan memanfaatkan fungsi dan prosedur. Fungsi hitungLuas dan hitungKeliling digunakan untuk mengembalikan nilai hasil perhitungan, sedangkan prosedur tampilkanHasil hanya menampilkan data tanpa mengembalikan nilai. Pada bagian main, pengguna diminta memasukkan panjang dan lebar, kemudian program menghitung luas serta keliling dengan fungsi, lalu menampilkan hasilnya kembali melalui prosedur.
 ### Kondisi
 ```c++
 #include <iostream>
@@ -138,10 +137,7 @@ int main()
 ```
 > Output
 > ![alt](output/kondisi.png)
-
-
-Penjelasan ttg kode kalian disini
-
+> Program C++ di atas terdiri dari beberapa contoh kode, namun yang aktif adalah bagian terakhir yang digunakan untuk menentukan apakah suatu hari termasuk hari kerja atau hari libur. Pengguna diminta memasukkan kode angka (1–7) yang mewakili hari dalam seminggu. Jika angka yang dimasukkan adalah 1 sampai 5 (Senin–Jumat), maka program menampilkan "Hari Kerja". Jika angka 6 atau 7 (Sabtu–Minggu), program menampilkan "Hari Libur". Apabila input tidak sesuai dengan 1–7, program akan menampilkan pesan "Kode masukan salah!!!".
 ### Perulangan
 ```c++
 #include <iostream>
@@ -175,8 +171,7 @@ int main()
 ```
 > Output
 > ![alt](output/perulangan.png)
-
-Penjelasan ttg kode kalian disini
+> Program C++ di atas menunjukkan penggunaan **perulangan (looping)**. Pada bagian yang dikomentari digunakan **for loop** untuk menampilkan teks sebanyak jumlah yang dimasukkan. Sedangkan bagian aktif menggunakan **do-while loop**, di mana program meminta input jumlah perulangan, lalu mencetak tulisan **"bahlil ke-"** disertai nomor urut mulai dari 2, dan terus berulang selama nilai `i` masih lebih kecil dari jumlah yang dimasukkan. Dengan demikian, output akan menampilkan teks berulang sesuai jumlah perulangan yang diinputkan pengguna.
 
 ### Struct
 ```c++
@@ -213,9 +208,7 @@ int main() {
 ```
 > Output
 > ![alt](output/struct.png)
-
-
-Penjelasan ttg kode kalian disini
+> Program C++ di atas menggunakan struct untuk menyimpan data mahasiswa. Struct bernama Mahasiswa memiliki tiga atribut, yaitu nama, nim, dan ipk. Pada fungsi main, dibuat sebuah variabel mhs1 dari tipe Mahasiswa. Program meminta pengguna memasukkan nama, NIM, dan IPK, lalu menyimpannya ke dalam variabel tersebut. Setelah itu, program menampilkan kembali data mahasiswa yang sudah dimasukkan ke layar dengan format yang rapi.
 
 ### Test
 ```c++
@@ -233,9 +226,7 @@ int main()
 ```
 > Output
 > ![alt](output/test.png)
-
-
-Penjelasan ttg kode kalian disini
+> Program C++ di atas digunakan untuk **membaca satu karakter input dari pengguna**. Variabel `ch` dideklarasikan sebagai `string`, lalu program meminta pengguna memasukkan sebuah karakter. Input dibaca dengan fungsi `getchar()`, yang mengambil satu karakter dari keyboard. Karakter yang dimasukkan kemudian ditampilkan kembali melalui `cout`. Jadi, program ini sederhana untuk menampilkan kembali karakter tunggal yang diketikkan oleh pengguna.
 
 ## UnGuided
 
@@ -264,8 +255,7 @@ int main(){
 ```
 > Output
 > ![alt](output/soal1.png)
-
-penjelasan kode
+> Program C++ di atas adalah program sederhana untuk melakukan **empat operasi aritmatika dasar**. Program meminta pengguna memasukkan dua bilangan bertipe `float`, kemudian menghitung hasil **penjumlahan, pengurangan, perkalian, dan pembagian** dari kedua bilangan tersebut. Setelah perhitungan, hasil masing-masing operasi ditampilkan ke layar dengan format yang jelas. Program ini berguna sebagai contoh dasar penggunaan input (`cin`), output (`cout`), serta operasi aritmatika dalam C++.
 
 ### Soal 2
 > ![alt](soal/S2.png)
@@ -300,8 +290,7 @@ int main() {
 ```
 > Output
 > ![alt](output/soal2.png)
-
-penjelasan kode
+> Program C++ di atas digunakan untuk **mengonversi angka menjadi teks dalam bahasa Indonesia** pada rentang 0 sampai 100. Program memanfaatkan dua array string, yaitu `satuan` untuk angka 1–9 dan `puluhan` untuk kelipatan 10. Setelah pengguna memasukkan angka, program akan mengecek kondisinya dengan `if-else`: angka 0 ditampilkan sebagai "nol", angka 10 "sepuluh", angka 11 "sebelas", angka 12–19 ditulis dalam bentuk "… belas", angka 20–99 ditulis dengan format "… puluh …", dan angka 100 ditampilkan sebagai "seratus". Dengan logika tersebut, misalnya jika input adalah 79, output yang muncul adalah "tujuh puluh sembilan".
 
 ### Soal 3
 > ![alt](soal/S3.png)
@@ -340,9 +329,7 @@ int main() {
 ```
 > Output
 > ![alt](output/soal3.png)
-
-penjelasan kode
-
+> Program C++ di atas menampilkan pola simetris angka dengan tanda bintang (*) di tengah. Input bilangan a menentukan tinggi pola, lalu dengan perulangan for dibuat deretan angka menurun di kiri, bintang di tengah, dan angka menaik di kanan, disertai spasi agar rata. Terakhir ditampilkan satu bintang di bagian bawah tengah.
 
 
 ## Referensi
