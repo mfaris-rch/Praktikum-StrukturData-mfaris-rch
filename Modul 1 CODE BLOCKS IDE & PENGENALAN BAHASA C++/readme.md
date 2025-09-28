@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 
-yang panjang dikit
+BELUM SELESAI
 
 ## Guided
 
