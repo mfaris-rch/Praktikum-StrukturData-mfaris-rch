@@ -23,8 +23,8 @@ int main(){
 }
 ```
 > Output
-> ![alt](output/aritmatika.png)
-> Program di atas merupakan program sederhana dalam bahasa C++ yang melakukan operasi aritmatika menggunakan variabel bertipe integer dan float. Variabel X, Y, dan W didefinisikan sebagai integer, lalu diberi nilai masing-masing X = 7, Y = 3, dan W = 1. Kemudian variabel Z bertipe float digunakan untuk menyimpan hasil perhitungan (X + Y) / (Y + W). Karena X + Y = 10 dan Y + W = 4, maka hasil pembagian adalah 10 / 4 = 2 (hasilnya integer karena operasi dilakukan antar bilangan bulat), lalu disimpan ke dalam variabel float Z, sehingga Z bernilai 2.0. Program kemudian menampilkan hasil tersebut di layar dengan perintah cout, sehingga output yang muncul adalah "Nilai z = 2"
+> ![alt](output/array.png)
+>Program tersebut bertujuan untuk menampilkan isi dari sebuah array integer. Pertama, program menginisialisasi sebuah array bernama nilai yang memiliki 5 elemen, yaitu {1, 2, 3, 4, 5}. Selanjutnya, program menggunakan perulangan for untuk mengakses setiap elemen array satu per satu, mulai dari indeks ke-0 hingga ke-4. Di dalam setiap perulangan, program akan mencetak ke layar nomor indeks beserta nilai elemen yang tersimpan pada indeks tersebut, sehingga menghasilkan output berupa daftar urutan elemen array dari awal hingga akhir. 2"
 
 ### 02_array
 ```c++
@@ -51,8 +51,11 @@ int main()
 }
 ```
 > Output
-> ![alt](output/fungsi.png)
-> Program C++ di atas digunakan untuk menghitung luas dan keliling persegi panjang dengan memanfaatkan fungsi dan prosedur. Fungsi hitungLuas dan hitungKeliling digunakan untuk mengembalikan nilai hasil perhitungan, sedangkan prosedur tampilkanHasil hanya menampilkan data tanpa mengembalikan nilai. Pada bagian main, pengguna diminta memasukkan panjang dan lebar, kemudian program menghitung luas serta keliling dengan fungsi, lalu menampilkan hasilnya kembali melalui prosedur.
+> ![alt](output/array2.png)
+> Tentu, ini deskripsinya:
+
+Program ini mendemonstrasikan cara menampilkan isi dari sebuah array dua dimensi atau matriks berukuran 3x3. Pertama, program mendeklarasikan dan menginisialisasi matriks integer bernama matriks dengan nilai dari 1 hingga 9. Kemudian, program menggunakan perulangan for bersarang (nested loop) untuk mengakses setiap elemen. Perulangan luar (i) akan mengiterasi setiap baris, sementara perulangan dalam (j) akan mengiterasi setiap kolom di dalam baris tersebut. Di dalam perulangan, setiap elemen matriks[i][j] dicetak ke layar, dan setelah satu baris selesai dicetak, perintah cout << endl; dieksekusi untuk pindah ke baris baru, sehingga output yang dihasilkan akan berbentuk matriks 3x3 yang rapi.
+
 ### 03_pointer
 ```c++
 #include <iostream>
@@ -75,8 +78,9 @@ int main()
 }
 ```
 > Output
-> ![alt](output/kondisi.png)
-> Program C++ di atas terdiri dari beberapa contoh kode, namun yang aktif adalah bagian terakhir yang digunakan untuk menentukan apakah suatu hari termasuk hari kerja atau hari libur. Pengguna diminta memasukkan kode angka (1–7) yang mewakili hari dalam seminggu. Jika angka yang dimasukkan adalah 1 sampai 5 (Senin–Jumat), maka program menampilkan "Hari Kerja". Jika angka 6 atau 7 (Sabtu–Minggu), program menampilkan "Hari Libur". Apabila input tidak sesuai dengan 1–7, program akan menampilkan pesan "Kode masukan salah!!!".
+> ![alt](output/pointer.png)
+> Program C++ ini mendemonstrasikan cara kerja pointer dengan membuat pointer p_umur yang menunjuk ke alamat memori variabel umur. Program kemudian mencetak nilai dan alamat memori variabel umur, baik secara langsung maupun melalui pointer, untuk membuktikan bahwa pointer tersebut berhasil menyimpan alamat dan dapat digunakan untuk mengakses kembali nilai aslinya.
+
 ### 04_array_pointer
 ```c++
 #include <iostream>
@@ -104,8 +108,8 @@ int main()
 }
 ```
 > Output
-> ![alt](output/perulangan.png)
-> Program C++ di atas menunjukkan penggunaan **perulangan (looping)**. Pada bagian yang dikomentari digunakan **for loop** untuk menampilkan teks sebanyak jumlah yang dimasukkan. Sedangkan bagian aktif menggunakan **do-while loop**, di mana program meminta input jumlah perulangan, lalu mencetak tulisan **"bahlil ke-"** disertai nomor urut mulai dari 2, dan terus berulang selama nilai `i` masih lebih kecil dari jumlah yang dimasukkan. Dengan demikian, output akan menampilkan teks berulang sesuai jumlah perulangan yang diinputkan pengguna.
+> ![alt](output/arraypointer.png)
+> Program ini mendemonstrasikan dua cara berbeda untuk mengakses dan menampilkan elemen-elemen dari sebuah array integer bernama data. Cara pertama adalah metode konvensional menggunakan looping dan indeks data[i]. Cara kedua adalah dengan menggunakan pointer p_data yang diarahkan ke alamat awal array, kemudian looping dan mengakses setiap elemen menggunakan notasi pointer aritmetika *(p_data + i). Kedua metode tersebut pada dasarnya melakukan hal yang sama dan akan menghasilkan output yang identik, yaitu menampilkan nilai dari setiap elemen array secara berurutan.
 
 ### 05_string_pointer
 ```c++
@@ -132,8 +136,8 @@ int main()
 }
 ```
 > Output
-> ![alt](output/struct.png)
-> Program C++ di atas menggunakan struct untuk menyimpan data mahasiswa. Struct bernama Mahasiswa memiliki tiga atribut, yaitu nama, nim, dan ipk. Pada fungsi main, dibuat sebuah variabel mhs1 dari tipe Mahasiswa. Program meminta pengguna memasukkan nama, NIM, dan IPK, lalu menyimpannya ke dalam variabel tersebut. Setelah itu, program menampilkan kembali data mahasiswa yang sudah dimasukkan ke layar dengan format yang rapi.
+> ![alt](output/stringpointer.png)
+> Program C++ ini mendemonstrasikan perbedaan mendasar antara mendeklarasikan string menggunakan char array (pesan_array) dan char pointer (pesan_pointer). Program ini menunjukkan bahwa string yang disimpan dalam char array bersifat dapat diubah, terbukti ketika karakter pertama "Nasi Padang" berhasil diubah menjadi 'h'. Sebaliknya, char pointer yang menunjuk ke sebuah string literal ("Ayam Bakar 23") merujuk pada data di memori yang sebaiknya tidak diubah, namun pointernya itu sendiri dapat diarahkan ulang untuk menunjuk ke string literal yang lain, seperti yang ditunjukkan saat pesan_pointer diubah untuk menunjuk ke "Sariman".
 
 ### 06_fungsi_prosedur
 ```c++
@@ -162,8 +166,8 @@ int main()
 }
 ```
 > Output
-> ![alt](output/test.png)
-> Program C++ di atas digunakan untuk **membaca satu karakter input dari pengguna**. Variabel `ch` dideklarasikan sebagai `string`, lalu program meminta pengguna memasukkan sebuah karakter. Input dibaca dengan fungsi `getchar()`, yang mengambil satu karakter dari keyboard. Karakter yang dimasukkan kemudian ditampilkan kembali melalui `cout`. Jadi, program ini sederhana untuk menampilkan kembali karakter tunggal yang diketikkan oleh pengguna.
+> ![alt](output/fungsiprosedur.png)
+> Program C++ ini mendemonstrasikan penggunaan fungsi untuk melakukan operasi aritmetika sederhana. Program utama (main) menginisialisasi dua variabel integer, angka1 dan angka2, dengan nilai 15 dan 10. Kemudian, program memanggil fungsi hitungJumlah untuk menjumlahkan kedua angka tersebut dan menyimpan hasilnya dalam variabel hasilJumlah. Terakhir, fungsi tampilkanHasil dipanggil untuk mencetak hasil penjumlahan (yaitu 25) ke layar konsol dengan pesan yang informatif.
 
 
 ### 07_call_by_pointer
@@ -188,8 +192,8 @@ int main()
 }
 ```
 > Output
-> ![alt](output/test.png)
-> Program C++ di atas digunakan untuk **membaca satu karakter input dari pengguna**. Variabel `ch` dideklarasikan sebagai `string`, lalu program meminta pengguna memasukkan sebuah karakter. Input dibaca dengan fungsi `getchar()`, yang mengambil satu karakter dari keyboard. Karakter yang dimasukkan kemudian ditampilkan kembali melalui `cout`. Jadi, program ini sederhana untuk menampilkan kembali karakter tunggal yang diketikkan oleh pengguna.
+> ![alt](output/callbypointer.png)
+> Program C++ ini menunjukkan cara menukar nilai dua variabel menggunakan konsep *pointer*. Fungsi `tukar` menerima dua parameter berupa alamat memori dari variabel `a` dan `b`, lalu menukar nilainya dengan bantuan variabel sementara `temp`. Di dalam fungsi `main`, nilai awal `a` dan `b` ditampilkan sebelum dan sesudah pemanggilan fungsi `tukar`, sehingga terlihat bahwa nilai `a` yang awalnya 10 menjadi 20, dan `b` yang awalnya 20 menjadi 10. Program ini merupakan contoh sederhana dari teknik *call by pointer*, yang memungkinkan perubahan nilai variabel asli melalui alamat memori.
 
 ### 08_call_by_reference
 ```c++
@@ -213,13 +217,13 @@ int main()
 }
 ```
 > Output
-> ![alt](output/test.png)
-> Program C++ di atas digunakan untuk **membaca satu karakter input dari pengguna**. Variabel `ch` dideklarasikan sebagai `string`, lalu program meminta pengguna memasukkan sebuah karakter. Input dibaca dengan fungsi `getchar()`, yang mengambil satu karakter dari keyboard. Karakter yang dimasukkan kemudian ditampilkan kembali melalui `cout`. Jadi, program ini sederhana untuk menampilkan kembali karakter tunggal yang diketikkan oleh pengguna.
+> ![alt](output/callbyreference.png)
+> Program C++ ini memperlihatkan cara menukar nilai dua variabel menggunakan teknik *call by reference*. Fungsi `tukar` menerima dua parameter berupa referensi (`int &x` dan `int &y`), sehingga perubahan nilai yang dilakukan di dalam fungsi langsung memengaruhi variabel asli yang dikirim dari fungsi `main`. Sebelum dan sesudah pemanggilan fungsi `tukar`, program mencetak nilai variabel `a` dan `b` ke layar, menunjukkan bahwa nilai `a` dan `b` berhasil ditukar tanpa menggunakan pointer. Pendekatan ini lebih sederhana dan aman dibandingkan penggunaan pointer, serta sangat berguna dalam pemrograman C++ modern.
 
 ## UnGuided
 
 ### Soal 1
-> ![alt](soal/S1.png)
+> ![alt](soal/soal1.png)
 ```c++
 #include <iostream>
 using namespace std;
@@ -262,11 +266,11 @@ int main() {
 
 ```
 > Output
-> ![alt](output/soal1.png)
-> Program C++ di atas adalah program sederhana untuk melakukan **empat operasi aritmatika dasar**. Program meminta pengguna memasukkan dua bilangan bertipe `float`, kemudian menghitung hasil **penjumlahan, pengurangan, perkalian, dan pembagian** dari kedua bilangan tersebut. Setelah perhitungan, hasil masing-masing operasi ditampilkan ke layar dengan format yang jelas. Program ini berguna sebagai contoh dasar penggunaan input (`cin`), output (`cout`), serta operasi aritmatika dalam C++.
+> ![alt](output/unguided1.png)
+>Program C++ ini berfungsi untuk melakukan transpose terhadap sebuah matriks berukuran 3x3. Transpose adalah proses menukar baris menjadi kolom dan sebaliknya. Program mendeklarasikan matriks awal dengan nilai 1 hingga 9, lalu membuat matriks baru bernama transpose untuk menyimpan hasil transposenya. Proses penukaran dilakukan dengan perulangan bersarang, di mana elemen matriks[i][j] dipindahkan ke transpose[j][i]. Setelah itu, program mencetak matriks awal dan hasil transposenya ke layar, sehingga pengguna dapat melihat perubahan struktur data secara visual.
 
 ### Soal 2
-> ![alt](soal/S2.png)
+> ![alt](soal/soal2.png)
 ```c++
 #include <iostream>
 using namespace std;
@@ -286,8 +290,8 @@ int main() {
 }
 ```
 > Output
-> ![alt](output/soal2.png)
-> Program C++ di atas digunakan untuk **mengonversi angka menjadi teks dalam bahasa Indonesia** pada rentang 0 sampai 100. Program memanfaatkan dua array string, yaitu `satuan` untuk angka 1–9 dan `puluhan` untuk kelipatan 10. Setelah pengguna memasukkan angka, program akan mengecek kondisinya dengan `if-else`: angka 0 ditampilkan sebagai "nol", angka 10 "sepuluh", angka 11 "sebelas", angka 12–19 ditulis dalam bentuk "… belas", angka 20–99 ditulis dengan format "… puluh …", dan angka 100 ditampilkan sebagai "seratus". Dengan logika tersebut, misalnya jika input adalah 79, output yang muncul adalah "tujuh puluh sembilan".
+> ![alt](output/unguided2.png)
+> Program ini menunjukkan penggunaan fungsi dengan parameter referensi untuk memodifikasi nilai variabel secara langsung. Fungsi kuadratkan menerima referensi dari variabel x, lalu mengubah nilainya menjadi hasil kuadrat dari nilai semula. Di dalam fungsi main, variabel angka diinisialisasi dengan nilai 5, kemudian dicetak sebelum dan sesudah pemanggilan fungsi kuadratkan. Karena parameter dikirim sebagai referensi, perubahan yang dilakukan dalam fungsi langsung memengaruhi nilai asli angka, sehingga hasil akhirnya adalah 25.
 
 ## Referensi
 
