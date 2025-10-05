@@ -2,10 +2,12 @@
 <p align="center">Muhammad Faris Rachmadi - 103112400079</p>
 
 ## Dasar Teori
- Array
+Array
+
 Array atau Larik adalah sebuah variabel yang memiliki serangkaian elemen dari jenis tipe data yang sama. Elemen-elemen tersebut dirangkai di dalam memori yang berdekatan dengan elemen lainya. konsep ini mirip seperti struct dan class yang dapat merupakan kumpulan dari variabel, perbedaan dengan mereka adalah array merupakan kumpulan variabel dengan satu indentifier dan satu tipe data yang sama, dan dalam istilah-istilah array kumpulan dari variabel tersebut adalah elemen.
 
 Pointer
+
 Setiap data atau variabel dalam sebuah program disimpan di dalam memori komputer (RAM). Memori ini bisa dibayangkan sebagai sebuah array satu dimensi yang sangat besar, di mana setiap selnya memiliki "alamat" atau "indeks" yang unik.  
 Pointer adalah sebuah tipe variabel khusus yang fungsinya bukan untuk menyimpan nilai data, melainkan untuk menyimpan alamat memori dari variabel lain. Dengan kata lain, pointer ini "menunjuk" ke lokasi di mana sebuah data disimpan.
 ## Guided
