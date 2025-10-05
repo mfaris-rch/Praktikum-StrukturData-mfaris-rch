@@ -224,22 +224,42 @@ int main()
 #include <iostream>
 using namespace std;
 
-int main(){
-    float x, y;
+int main() {
+    int matriks[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
 
-    cout << "Masukkan Bilangan Pertama: ";
-    cin >> x;
-    cout << "Masukkan Bilangan Kedua: ";
-    cin >> y;
+    int transpose[3][3];
 
-       cout << "\nHasil Operasi:\n";
-    cout << "Penjumlahan      = " << x + y << endl;
-    cout << "Pengurangan      = " << x - y << endl;
-    cout << "Perkalian        = " << x * y << endl;
-    cout << "Pembagian        = " << x / y << endl;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            transpose[j][i] = matriks[i][j];
+        }
+    }
+
+    cout << "Matriks Awal:" << endl;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << matriks[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    cout << endl;
+
+    cout << "Matriks Hasil Transpose:" << endl;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << transpose[i][j] << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
+
 ```
 > Output
 > ![alt](output/soal1.png)
@@ -251,27 +271,16 @@ int main(){
 #include <iostream>
 using namespace std;
 
+void kuadratkan(int &x) {
+    x = x * x;
+}
+
 int main() {
-    string satuan[] = {"", "satu", "dua", "tiga", "empat", "lima", 
-                       "enam", "tujuh", "delapan", "sembilan"};
-    string puluhan[] = {"", "sepuluh", "dua puluh", "tiga puluh", "empat puluh", 
-                        "lima puluh", "enam puluh", "tujuh puluh", 
-                        "delapan puluh", "sembilan puluh"};
-    
+    int angka = 5;
 
-    int bil;
-    cout << "Masukkan angka (0-100): ";
-    cin >> bil;
-
-    if (bil == 0) cout << "nol";
-    else if (bil == 10) cout << "sepuluh";
-    else if (bil == 11) cout << "sebelas";
-    else if (bil < 20) cout << satuan[bil - 10] << " belas";      
-    else if (bil < 100) {
-        cout << puluhan[bil / 10];
-        if (bil % 10 != 0) cout << " " << satuan[bil % 10];       
-    }
-    else if (bil == 100) cout << "seratus";
+    cout << "Nilai awal: " << angka << endl;
+    kuadratkan(angka);
+    cout << "Nilai setelah dikuadratkan: " << angka << endl;
 
     return 0;
 }
@@ -279,46 +288,6 @@ int main() {
 > Output
 > ![alt](output/soal2.png)
 > Program C++ di atas digunakan untuk **mengonversi angka menjadi teks dalam bahasa Indonesia** pada rentang 0 sampai 100. Program memanfaatkan dua array string, yaitu `satuan` untuk angka 1–9 dan `puluhan` untuk kelipatan 10. Setelah pengguna memasukkan angka, program akan mengecek kondisinya dengan `if-else`: angka 0 ditampilkan sebagai "nol", angka 10 "sepuluh", angka 11 "sebelas", angka 12–19 ditulis dalam bentuk "… belas", angka 20–99 ditulis dengan format "… puluh …", dan angka 100 ditampilkan sebagai "seratus". Dengan logika tersebut, misalnya jika input adalah 79, output yang muncul adalah "tujuh puluh sembilan".
-
-### Soal 3
-> ![alt](soal/S3.png)
-```c++
-#include <iostream>
-using namespace std;
-
-int main() {
-    int a;
-    cout << "Input: ";
-    cin >> a;
-
-    cout << "Output:" << endl;
-    for (int i = a; i >= 1; i--) {
-        for (int s = 0; s < (a - i); s++) {
-            cout << "  "; 
-        }
-        // kiri (turun)
-        for (int j = i; j >= 1; j--) {
-            cout << j << " ";
-        }
-        cout << "* "; 
-        for (int j = 1; j <= i; j++) {
-            cout << j << " ";
-        }
-        cout << endl;
-    }
-
-    for (int s = 0; s < a; s++) {
-        cout << "  "; // spasi ganda
-    }
-    cout << "*" << endl;
-
-    return 0;
-}
-```
-> Output
-> ![alt](output/soal3.png)
-> Program C++ di atas menampilkan pola simetris angka dengan tanda bintang (*) di tengah. Input bilangan a menentukan tinggi pola, lalu dengan perulangan for dibuat deretan angka menurun di kiri, bintang di tengah, dan angka menaik di kanan, disertai spasi agar rata. Terakhir ditampilkan satu bintang di bagian bawah tengah.
-
 
 ## Referensi
 
