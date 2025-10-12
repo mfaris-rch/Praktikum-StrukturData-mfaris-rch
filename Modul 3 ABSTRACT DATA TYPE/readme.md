@@ -65,138 +65,179 @@ int main()
 > ![alt](output/pointer.png)
 > Program C++ ini mendemonstrasikan cara kerja pointer dengan membuat pointer p_umur yang menunjuk ke alamat memori variabel umur. Program kemudian mencetak nilai dan alamat memori variabel umur, baik secara langsung maupun melalui pointer, untuk membuktikan bahwa pointer tersebut berhasil menyimpan alamat dan dapat digunakan untuk mengakses kembali nilai aslinya.
 
-### 04_array_pointer
+
+
+## UnGuided
+
+### Unguided1.cpp
+> ![alt](soal/soal1.png)
 ```c++
 #include <iostream>
+#include "unguided1.h"
+
+void hitungNilaiAkhir(Mahasiswa &mhs) {
+    mhs.nilai_akhir = (0.3f * mhs.uts) + (0.4f * mhs.uas) + (0.3f * mhs.tugas);
+}
+
+void inputData(Mahasiswa &mhs) {
+    cout << "Masukkan Nama  : ";
+    getline(cin, mhs.nama);
+
+    cout << "Masukkan NIM   : ";
+    cin >> mhs.nim;
+
+    cout << "Masukkan Nilai UTS   : ";
+    cin >> mhs.uts;
+
+    cout << "Masukkan Nilai UAS   : ";
+    cin >> mhs.uas;
+
+    cout << "Masukkan Nilai Tugas : ";
+    cin >> mhs.tugas;
+
+    //cin.ignore(1024, '\n');
+
+    hitungNilaiAkhir(mhs);
+}
+
+void tampilData(const Mahasiswa &mhs) {
+    cout << "Nama        : " << mhs.nama << endl;
+    cout << "NIM         : " << mhs.nim << endl;
+    cout << "Nilai UTS   : " << mhs.uts << endl;
+    cout << "Nilai UAS   : " << mhs.uas << endl;
+    cout << "Nilai Tugas : " << mhs.tugas << endl;
+    cout << "Nilai Akhir : " << mhs.nilai_akhir << endl;
+}
+
+```
+
+### Unguided1.h
+> ![alt](soal/soal2.png)
+```c++
+#ifndef UNGUIDED_H
+#define UNGUIDED_H
+
+#include <string>
+
 using namespace std;
 
-int main()
-{
-    int data[5] = {10, 20, 30, 40, 50};
-    int *p_data = data;
+struct Mahasiswa {
+    string nama;
+    string nim;
+    float uts;
+    float uas;
+    float tugas;
+    float nilai_akhir;
+};
 
-    cout << "Mengakses elemen array cara normal: " << endl;
+void inputData(Mahasiswa &mhs);
+void hitungNilaiAkhir(Mahasiswa &mhs);
+void tampilData(const Mahasiswa &mhs);
 
-    for (int i = 0; i < 5; ++i)
-    {
-        cout << "Nilai elemen ke- " << i << ": " << data[i] << endl;
-    }
+#endif
+```
+### Main.cpp
+> ![alt](soal/soal1.png)
+```c++
+#include <iostream>
+#include "unguided1.h"
 
-    cout << "Mengakses elemen array menggunakan pointer:" << endl;
+void hitungNilaiAkhir(Mahasiswa &mhs) {
+    mhs.nilai_akhir = (0.3f * mhs.uts) + (0.4f * mhs.uas) + (0.3f * mhs.tugas);
+}
 
-    for (int i = 0; i < 5; ++i)
-    {
-        cout << "Nilai elemen ke-" << i << ": " << *(p_data + i) << endl;
-    }
-    return 0;
+void inputData(Mahasiswa &mhs) {
+    cout << "Masukkan Nama  : ";
+    getline(cin, mhs.nama);
+
+    cout << "Masukkan NIM   : ";
+    cin >> mhs.nim;
+
+    cout << "Masukkan Nilai UTS   : ";
+    cin >> mhs.uts;
+
+    cout << "Masukkan Nilai UAS   : ";
+    cin >> mhs.uas;
+
+    cout << "Masukkan Nilai Tugas : ";
+    cin >> mhs.tugas;
+
+    //cin.ignore(1024, '\n');
+
+    hitungNilaiAkhir(mhs);
+}
+
+void tampilData(const Mahasiswa &mhs) {
+    cout << "Nama        : " << mhs.nama << endl;
+    cout << "NIM         : " << mhs.nim << endl;
+    cout << "Nilai UTS   : " << mhs.uts << endl;
+    cout << "Nilai UAS   : " << mhs.uas << endl;
+    cout << "Nilai Tugas : " << mhs.tugas << endl;
+    cout << "Nilai Akhir : " << mhs.nilai_akhir << endl;
 }
 ```
 > Output
-> ![alt](output/arraypointer.png)
-> Program ini mendemonstrasikan dua cara berbeda untuk mengakses dan menampilkan elemen-elemen dari sebuah array integer bernama data. Cara pertama adalah metode konvensional menggunakan looping dan indeks data[i]. Cara kedua adalah dengan menggunakan pointer p_data yang diarahkan ke alamat awal array, kemudian looping dan mengakses setiap elemen menggunakan notasi pointer aritmetika *(p_data + i). Kedua metode tersebut pada dasarnya melakukan hal yang sama dan akan menghasilkan output yang identik, yaitu menampilkan nilai dari setiap elemen array secara berurutan.
+> ![alt](output/callbyreference.png)
+> Program C++ ini memperlihatkan cara menukar nilai dua variabel menggunakan teknik *call by reference*. Fungsi `tukar` menerima dua parameter berupa referensi (`int &x` dan `int &y`), sehingga perubahan nilai yang dilakukan di dalam fungsi langsung memengaruhi variabel asli yang dikirim dari fungsi `main`. Sebelum dan sesudah pemanggilan fungsi `tukar`, program mencetak nilai variabel `a` dan `b` ke layar, menunjukkan bahwa nilai `a` dan `b` berhasil ditukar tanpa menggunakan pointer. Pendekatan ini lebih sederhana dan aman dibandingkan penggunaan pointer, serta sangat berguna dalam pemrograman C++ modern.
 
-### 05_string_pointer
+
+### Unguided2.cpp
+> ![alt](soal/soal1.png)
 ```c++
+#include "unguided2.h"
 #include <iostream>
+
 using namespace std;
 
-int main()
-{
-    char pesan_array[] = "Nasi Padang";
-    char* pesan_pointer = "Ayam Bakar 23";
+pelajaran create_pelajaran(string nama, string kode) {
+    pelajaran p;
+    p.namaMapel = nama;
+    p.kodeMapel = kode;
+    return p;
+}
 
-    cout << "String Array: " << pesan_array << endl;
-    cout << "String Pointer: " << pesan_pointer << endl;
-
-    // Mengubah karakter dalam array diperbolehkan
-    pesan_array[0] = 'h';
-    cout << "String Array setelah diubah: " << pesan_array << endl;
-
-    // Pointer dapat diubah untuk menunjuk ke string lain
-    pesan_pointer = "Sariman";
-    cout << "String Pointer setelah menunjuk ke string lain: " << pesan_pointer << endl;
-
-    return 0;
+void tampil_pelajaran(pelajaran pel) {
+    cout << "nama pelajaran : " << pel.namaMapel << endl;
+    cout << "nilai          : " << pel.kodeMapel << endl;
 }
 ```
-> Output
-> ![alt](output/stringpointer.png)
-> Program C++ ini mendemonstrasikan perbedaan mendasar antara mendeklarasikan string menggunakan char array (pesan_array) dan char pointer (pesan_pointer). Program ini menunjukkan bahwa string yang disimpan dalam char array bersifat dapat diubah, terbukti ketika karakter pertama "Nasi Padang" berhasil diubah menjadi 'h'. Sebaliknya, char pointer yang menunjuk ke sebuah string literal ("Ayam Bakar 23") merujuk pada data di memori yang sebaiknya tidak diubah, namun pointernya itu sendiri dapat diarahkan ulang untuk menunjuk ke string literal yang lain, seperti yang ditunjukkan saat pesan_pointer diubah untuk menunjuk ke "Sariman".
 
-### 06_fungsi_prosedur
+### Unguided2.h
+> ![alt](soal/soal2.png)
 ```c++
-#include <iostream>
+#ifndef PELAJARAN_H
+#define PELAJARAN_H
 
-int hitungJumlah(int a, int b)
-{
-    return a + b;
-}
+#include <string>
 
-void tampilkanHasil(int hasil)
-{
-    std::cout << "Hasil penjumlahannya adalah: " << hasil << std::endl;
-}
-
-int main()
-{
-    int angka1 = 15;
-    int angka2 = 10;
-    int hasilJumlah;
-
-    hasilJumlah = hitungJumlah(angka1, angka2);
-    tampilkanHasil(hasilJumlah);
-
-    return 0;
-}
-```
-> Output
-> ![alt](output/fungsiprosedur.png)
-> Program C++ ini mendemonstrasikan penggunaan fungsi untuk melakukan operasi aritmetika sederhana. Program utama (main) menginisialisasi dua variabel integer, angka1 dan angka2, dengan nilai 15 dan 10. Kemudian, program memanggil fungsi hitungJumlah untuk menjumlahkan kedua angka tersebut dan menyimpan hasilnya dalam variabel hasilJumlah. Terakhir, fungsi tampilkanHasil dipanggil untuk mencetak hasil penjumlahan (yaitu 25) ke layar konsol dengan pesan yang informatif.
-
-
-### 07_call_by_pointer
-```c++
-#include <iostream>
 using namespace std;
 
-void tukar(int *px, int *py)
-{
-    int temp = *px;
-    *px = *py;
-    *py = temp;
-}
+struct pelajaran {
+    string namaMapel;
+    string kodeMapel;
+};
 
-int main()
-{
-    int a = 10, b = 20;
-    cout << "Sebelum ditukar: a = " << a << ", b = " << b << endl;
-    tukar(&a, &b);
-    cout << "Setelah ditukar: a = " << a << ", b = " << b << endl;
-    return 0;
-}
+pelajaran create_pelajaran(string nama, string kode);
+void tampil_pelajaran(pelajaran pel);
+
+#endif 
 ```
-> Output
-> ![alt](output/callbypointer.png)
-> Program C++ ini menunjukkan cara menukar nilai dua variabel menggunakan konsep *pointer*. Fungsi `tukar` menerima dua parameter berupa alamat memori dari variabel `a` dan `b`, lalu menukar nilainya dengan bantuan variabel sementara `temp`. Di dalam fungsi `main`, nilai awal `a` dan `b` ditampilkan sebelum dan sesudah pemanggilan fungsi `tukar`, sehingga terlihat bahwa nilai `a` yang awalnya 10 menjadi 20, dan `b` yang awalnya 20 menjadi 10. Program ini merupakan contoh sederhana dari teknik *call by pointer*, yang memungkinkan perubahan nilai variabel asli melalui alamat memori.
-
-### 08_call_by_reference
+### Main.cpp
+> ![alt](soal/soal1.png)
 ```c++
-#include <iostream>
+#include "unguided2.h"
+#include <string>
+
 using namespace std;
 
-void tukar(int &x, int &y)
-{
-    int temp = x;
-    x = y;
-    y = temp;
-}
-
-int main()
-{
-    int a = 10, b = 20;
-    cout << "Sebelum ditukar: a = " << a << ", b = " << b << endl;
-    tukar(a, b);
-    cout << "Setelah ditukar: a = " << a << ", b = " << b << endl;
+int main() {
+    string namapel = "Struktur Data";
+    string kodepel = "STD";
+    
+    pelajaran pel = create_pelajaran(namapel, kodepel);
+    
+    tampil_pelajaran(pel);
+    
     return 0;
 }
 ```
@@ -204,78 +245,104 @@ int main()
 > ![alt](output/callbyreference.png)
 > Program C++ ini memperlihatkan cara menukar nilai dua variabel menggunakan teknik *call by reference*. Fungsi `tukar` menerima dua parameter berupa referensi (`int &x` dan `int &y`), sehingga perubahan nilai yang dilakukan di dalam fungsi langsung memengaruhi variabel asli yang dikirim dari fungsi `main`. Sebelum dan sesudah pemanggilan fungsi `tukar`, program mencetak nilai variabel `a` dan `b` ke layar, menunjukkan bahwa nilai `a` dan `b` berhasil ditukar tanpa menggunakan pointer. Pendekatan ini lebih sederhana dan aman dibandingkan penggunaan pointer, serta sangat berguna dalam pemrograman C++ modern.
 
-## UnGuided
+### Unguided3.cpp
+> ![alt](soal/soal1.png)
+```c++
+#include "unguided3.h"
+#include <iostream>
+#include <iomanip>
 
-### Soal 1
+using namespace std;
+
+void tampilArray(int arr[3][3]) {
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            cout << setw(4) << arr[i][j];
+        }
+        cout << endl;
+    }
+}
+
+void tukarElemenArray(int arrA[3][3], int arrB[3][3], int baris, int kolom) {
+    if (baris >= 0 && baris < 3 && kolom >= 0 && kolom < 3) {
+        int temp = arrA[baris][kolom];
+        arrA[baris][kolom] = arrB[baris][kolom];
+        arrB[baris][kolom] = temp;
+    } else {
+        cout << "Error: Posisi baris atau kolom tidak valid!" << endl;
+    }
+}
+
+void tukarPointer(int* ptr1, int* ptr2) {
+    int temp = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = temp;
+}
+```
+
+### Unguided3.h
+> ![alt](soal/soal2.png)
+```c++
+#ifndef OPERASI_ARRAY_H
+#define OPERASI_ARRAY_H
+
+void tampilArray(int arr[3][3]);
+
+void tukarElemenArray(int arrA[3][3], int arrB[3][3], int baris, int kolom);
+
+void tukarPointer(int* ptr1, int* ptr2);
+
+#endif 
+```
+### Main.cpp
 > ![alt](soal/soal1.png)
 ```c++
 #include <iostream>
+#include "unguided3.h"
+
 using namespace std;
 
 int main() {
-    int matriks[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}
-    };
+    int arrayA[3][3] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+    int arrayB[3][3] = { {10, 20, 30}, {40, 50, 60}, {70, 80, 90} };
 
-    int transpose[3][3];
+    int var1 = 100;
+    int var2 = 200;
+    int* pointer1 = &var1;
+    int* pointer2 = &var2;
 
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            transpose[j][i] = matriks[i][j];
-        }
-    }
+    cout << "--- KEADAAN AWAL ---" << endl;
+    cout << "Isi Array A:" << endl;
+    tampilArray(arrayA);
+    cout << "\nIsi Array B:" << endl;
+    tampilArray(arrayB);
+    cout << "\nNilai yang ditunjuk pointer1 (var1): " << *pointer1 << endl;
+    cout << "Nilai yang ditunjuk pointer2 (var2): " << *pointer2 << endl;
+    cout << "----------------------\n" << endl;
 
-    cout << "Matriks Awal:" << endl;
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            cout << matriks[i][j] << " ";
-        }
-        cout << endl;
-    }
+    int baris = 1;
+    int kolom = 2;
+    cout << "--- MENUKAR ELEMEN ARRAY PADA POSISI [" << baris << "][" << kolom << "] ---" << endl;
+    tukarElemenArray(arrayA, arrayB, baris, kolom);
+    cout << "Isi Array A setelah ditukar:" << endl;
+    tampilArray(arrayA);
+    cout << "\nIsi Array B setelah ditukar:" << endl;
+    tampilArray(arrayB);
+    cout << "------------------------------------------\n" << endl;
 
-    cout << endl;
-
-    cout << "Matriks Hasil Transpose:" << endl;
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            cout << transpose[i][j] << " ";
-        }
-        cout << endl;
-    }
-
-    return 0;
-}
-
-```
-> Output
-> ![alt](output/unguided1.png)
->Program C++ ini berfungsi untuk melakukan transpose terhadap sebuah matriks berukuran 3x3. Transpose adalah proses menukar baris menjadi kolom dan sebaliknya. Program mendeklarasikan matriks awal dengan nilai 1 hingga 9, lalu membuat matriks baru bernama transpose untuk menyimpan hasil transposenya. Proses penukaran dilakukan dengan perulangan bersarang, di mana elemen matriks[i][j] dipindahkan ke transpose[j][i]. Setelah itu, program mencetak matriks awal dan hasil transposenya ke layar, sehingga pengguna dapat melihat perubahan struktur data secara visual.
-
-### Soal 2
-> ![alt](soal/soal2.png)
-```c++
-#include <iostream>
-using namespace std;
-
-void kuadratkan(int &x) {
-    x = x * x;
-}
-
-int main() {
-    int angka = 5;
-
-    cout << "Nilai awal: " << angka << endl;
-    kuadratkan(angka);
-    cout << "Nilai setelah dikuadratkan: " << angka << endl;
+    cout << "--- MENUKAR NILAI VARIABEL VIA POINTER ---" << endl;
+    tukarPointer(pointer1, pointer2);
+    cout << "Nilai var1 setelah ditukar: " << var1 << endl;
+    cout << "Nilai var2 setelah ditukar: " << var2 << endl;
+    cout << "----------------------------------------\n" << endl;
 
     return 0;
 }
 ```
 > Output
-> ![alt](output/unguided2.png)
-> Program ini menunjukkan penggunaan fungsi dengan parameter referensi untuk memodifikasi nilai variabel secara langsung. Fungsi kuadratkan menerima referensi dari variabel x, lalu mengubah nilainya menjadi hasil kuadrat dari nilai semula. Di dalam fungsi main, variabel angka diinisialisasi dengan nilai 5, kemudian dicetak sebelum dan sesudah pemanggilan fungsi kuadratkan. Karena parameter dikirim sebagai referensi, perubahan yang dilakukan dalam fungsi langsung memengaruhi nilai asli angka, sehingga hasil akhirnya adalah 25.
+> ![alt](output/callbyreference.png)
+> Program C++ ini memperlihatkan cara menukar nilai dua variabel menggunakan teknik *call by reference*. Fungsi `tukar` menerima dua parameter berupa referensi (`int &x` dan `int &y`), sehingga perubahan nilai yang dilakukan di dalam fungsi langsung memengaruhi variabel asli yang dikirim dari fungsi `main`. Sebelum dan sesudah pemanggilan fungsi `tukar`, program mencetak nilai variabel `a` dan `b` ke layar, menunjukkan bahwa nilai `a` dan `b` berhasil ditukar tanpa menggunakan pointer. Pendekatan ini lebih sederhana dan aman dibandingkan penggunaan pointer, serta sangat berguna dalam pemrograman C++ modern.
+
 
 ## Referensi
 
