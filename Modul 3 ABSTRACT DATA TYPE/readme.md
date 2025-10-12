@@ -112,7 +112,6 @@ void tampilData(const Mahasiswa &mhs) {
 ```
 
 ### Unguided1.h
-> ![alt](soal/soal2.png)
 ```c++
 #ifndef UNGUIDED_H
 #define UNGUIDED_H
@@ -137,7 +136,6 @@ void tampilData(const Mahasiswa &mhs);
 #endif
 ```
 ### Main.cpp
-> ![alt](soal/soal1.png)
 ```c++
 #include <iostream>
 #include "unguided1.h"
@@ -177,12 +175,12 @@ void tampilData(const Mahasiswa &mhs) {
 }
 ```
 > Output
-> ![alt](output/callbyreference.png)
-> Program C++ ini memperlihatkan cara menukar nilai dua variabel menggunakan teknik *call by reference*. Fungsi `tukar` menerima dua parameter berupa referensi (`int &x` dan `int &y`), sehingga perubahan nilai yang dilakukan di dalam fungsi langsung memengaruhi variabel asli yang dikirim dari fungsi `main`. Sebelum dan sesudah pemanggilan fungsi `tukar`, program mencetak nilai variabel `a` dan `b` ke layar, menunjukkan bahwa nilai `a` dan `b` berhasil ditukar tanpa menggunakan pointer. Pendekatan ini lebih sederhana dan aman dibandingkan penggunaan pointer, serta sangat berguna dalam pemrograman C++ modern.
+> ![alt](output/unguided1.png)
+> Program C++ ini berfungsi sebagai aplikasi pendataan nilai mahasiswa yang dirancang secara modular, memungkinkan pengguna memasukkan data hingga 10 orang. Untuk setiap mahasiswa, pengguna dapat menginput informasi berupa nama, NIM, serta tiga komponen nilai: UTS, UAS, dan tugas. Sistem kemudian secara otomatis menghitung nilai akhir berdasarkan rumus pembobotan (30% UTS, 40% UAS, dan 30% tugas) segera setelah data dimasukkan. Setelah sesi input selesai, program akan menampilkan sebuah rekapitulasi lengkap yang merinci seluruh data mahasiswa yang tersimpan, beserta nilai-nilai komponen dan hasil akhir yang telah dikalkulasi.
 
 
 ### Unguided2.cpp
-> ![alt](soal/soal1.png)
+> ![alt](soal/soal2.png)
 ```c++
 #include "unguided2.h"
 #include <iostream>
@@ -203,7 +201,6 @@ void tampil_pelajaran(pelajaran pel) {
 ```
 
 ### Unguided2.h
-> ![alt](soal/soal2.png)
 ```c++
 #ifndef PELAJARAN_H
 #define PELAJARAN_H
@@ -223,7 +220,6 @@ void tampil_pelajaran(pelajaran pel);
 #endif 
 ```
 ### Main.cpp
-> ![alt](soal/soal1.png)
 ```c++
 #include "unguided2.h"
 #include <string>
@@ -242,11 +238,11 @@ int main() {
 }
 ```
 > Output
-> ![alt](output/callbyreference.png)
-> Program C++ ini memperlihatkan cara menukar nilai dua variabel menggunakan teknik *call by reference*. Fungsi `tukar` menerima dua parameter berupa referensi (`int &x` dan `int &y`), sehingga perubahan nilai yang dilakukan di dalam fungsi langsung memengaruhi variabel asli yang dikirim dari fungsi `main`. Sebelum dan sesudah pemanggilan fungsi `tukar`, program mencetak nilai variabel `a` dan `b` ke layar, menunjukkan bahwa nilai `a` dan `b` berhasil ditukar tanpa menggunakan pointer. Pendekatan ini lebih sederhana dan aman dibandingkan penggunaan pointer, serta sangat berguna dalam pemrograman C++ modern.
+> ![alt](output/unguided2.png)
+> Program C++ ini mendemonstrasikan pendekatan berorientasi objek untuk mengelola data mata pelajaran menggunakan desain modular. Alur kerjanya dimulai dari file main.cpp, di mana sebuah objek bernama pel dari kelas Pelajaran dibuat. Saat objek ini dibuat, constructor kelas Pelajaran secara otomatis dipanggil untuk menginisialisasi data internalnya (nama "Struktur Data" dan kode "STD"). Setelah objek berhasil dibuat dan diinisialisasi, program kemudian memanggil member function tampilkan_info() langsung dari objek pel itu sendiri, yang bertugas untuk mencetak detail nama dan kode mata pelajaran tersebut ke layar terminal.
 
 ### Unguided3.cpp
-> ![alt](soal/soal1.png)
+> ![alt](soal/soal3.png)
 ```c++
 #include "unguided3.h"
 #include <iostream>
@@ -281,7 +277,6 @@ void tukarPointer(int* ptr1, int* ptr2) {
 ```
 
 ### Unguided3.h
-> ![alt](soal/soal2.png)
 ```c++
 #ifndef OPERASI_ARRAY_H
 #define OPERASI_ARRAY_H
@@ -295,7 +290,6 @@ void tukarPointer(int* ptr1, int* ptr2);
 #endif 
 ```
 ### Main.cpp
-> ![alt](soal/soal1.png)
 ```c++
 #include <iostream>
 #include "unguided3.h"
@@ -340,8 +334,8 @@ int main() {
 }
 ```
 > Output
-> ![alt](output/callbyreference.png)
-> Program C++ ini memperlihatkan cara menukar nilai dua variabel menggunakan teknik *call by reference*. Fungsi `tukar` menerima dua parameter berupa referensi (`int &x` dan `int &y`), sehingga perubahan nilai yang dilakukan di dalam fungsi langsung memengaruhi variabel asli yang dikirim dari fungsi `main`. Sebelum dan sesudah pemanggilan fungsi `tukar`, program mencetak nilai variabel `a` dan `b` ke layar, menunjukkan bahwa nilai `a` dan `b` berhasil ditukar tanpa menggunakan pointer. Pendekatan ini lebih sederhana dan aman dibandingkan penggunaan pointer, serta sangat berguna dalam pemrograman C++ modern.
+> ![alt](output/unguided3.png)
+> Program C++ ini mendemonstrasikan manipulasi data dasar menggunakan array dua dimensi dan pointer dengan menerapkan desain modular yang baik. Program ini dibagi menjadi tiga file: file header (.h) untuk deklarasi fungsi, file implementasi (.cpp) untuk definisi fungsi, dan file utama (main.cpp) untuk eksekusi. Fungsi utamanya adalah untuk menampilkan, menukar elemen pada posisi tertentu antara dua array 3x3, dan menukar nilai dari dua variabel integer melalui pointer. Alur program di main menunjukkan keadaan awal data, kemudian memanggil fungsi untuk melakukan kedua jenis penukaran tersebut, dan diakhiri dengan menampilkan hasil setelah perubahan.
 
 
 ## Referensi
