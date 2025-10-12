@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 3 <br> ABSTARCT DATA TYPE
+# <h1 align="center">Laporan Praktikum Modul 3 <br> ABSTRACT DATA TYPE
 <p align="center">Muhammad Faris Rachmadi - 103112400079</p>
 
 ## Dasar Teori
@@ -12,72 +12,52 @@ Setiap data atau variabel dalam sebuah program disimpan di dalam memori komputer
 Pointer adalah sebuah tipe variabel khusus yang fungsinya bukan untuk menyimpan nilai data, melainkan untuk menyimpan alamat memori dari variabel lain. Dengan kata lain, pointer ini "menunjuk" ke lokasi di mana sebuah data disimpan.
 ## Guided
 
-### 01_array
+### Mahasiswa.cpp
 ```c++
+#include "mahasiswa.h"
 #include <iostream>
 using namespace std;
 
-int main(){
-    int nilai[5] = {1, 2, 3, 4, 5};
-    for (int i = 0; i < 5; ++i)
-    {
-        cout << "Elemen ke-" << i << " = " << nilai[i] << endl;
-    }
-    return 0;
-}
-```
-> Output
-> ![alt](output/array.png)
->Program tersebut bertujuan untuk menampilkan isi dari sebuah array integer. Pertama, program menginisialisasi sebuah array bernama nilai yang memiliki 5 elemen, yaitu {1, 2, 3, 4, 5}. Selanjutnya, program menggunakan perulangan for untuk mengakses setiap elemen array satu per satu, mulai dari indeks ke-0 hingga ke-4. Di dalam setiap perulangan, program akan mencetak ke layar nomor indeks beserta nilai elemen yang tersimpan pada indeks tersebut, sehingga menghasilkan output berupa daftar urutan elemen array dari awal hingga akhir. 2"
-
-### 02_array
-```c++
-#include <iostream>
-using namespace std;
-
-int main()
-
+void inputMhs(mahasiswa &m)
 {
-    int matriks[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}};
-
-    for (int i = 0; i < 3; ++i)
-    {
-        for (int j = 0; j < 3; ++j)
-        {
-            cout << matriks[i][j] << " ";
-        }
-        cout << endl;
-    }
-    return 0;
+    cout << "input nama = ";
+    cin >> (m).nim;
+    cout << "input nilai = ";
+    cin >> (m).nilai1;
+    cout << "input nilai2 = ";
+    cin >> (m).nilai2;
+}
+float rata2(mahasiswa m)
+{
+    return float(m.nilai1 + m.nilai2) / 2;
 }
 ```
-> Output
-> ![alt](output/array2.png)
-> Tentu, ini deskripsinya:
 
-Program ini mendemonstrasikan cara menampilkan isi dari sebuah array dua dimensi atau matriks berukuran 3x3. Pertama, program mendeklarasikan dan menginisialisasi matriks integer bernama matriks dengan nilai dari 1 hingga 9. Kemudian, program menggunakan perulangan for bersarang (nested loop) untuk mengakses setiap elemen. Perulangan luar (i) akan mengiterasi setiap baris, sementara perulangan dalam (j) akan mengiterasi setiap kolom di dalam baris tersebut. Di dalam perulangan, setiap elemen matriks[i][j] dicetak ke layar, dan setelah satu baris selesai dicetak, perintah cout << endl; dieksekusi untuk pindah ke baris baru, sehingga output yang dihasilkan akan berbentuk matriks 3x3 yang rapi.
+### Mahasiswa.h
+```c++
+#ifndef MAHASISWA_H_INCLUDED
+#define MAHASISWA_H_INCLUDED
+struct mahasiswa
+{
+    char nim[10];
+    int nilai1, nilai2;
+};
+void inputMhs(mahasiswa &m);
+float rata2(mahasiswa m);
+#endif
+```
 
-### 03_pointer
+### Main.cpp
 ```c++
 #include <iostream>
+#include "mahasiswa.h"
 using namespace std;
 
 int main()
 {
-    int umur = 25;
-    int *p_umur;
-
-    p_umur = &umur;
-
-    cout << "Nilai 'umur': " << umur << endl;
-    cout << "Alamat memeori 'umur': " << &umur << endl;
-    cout << "Nilai 'p_umur' (alamat): " <<p_umur << endl;
-    cout << "Nilai yang diakses 'p_umur': " << *p_umur << endl;
-    cout << "Alamat memori dari pointer 'p_umur' itu sendiri: " << &p_umur << endl;
-
+    mahasiswa mhs;
+    inputMhs(mhs);
+    cout << "rata - rata = " << rata2(mhs);
     return 0;
 }
 ```
