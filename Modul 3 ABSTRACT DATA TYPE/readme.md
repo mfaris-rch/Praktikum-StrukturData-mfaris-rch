@@ -335,8 +335,7 @@ int main() {
 
 ## Referensi
 
-1. MODUL PRAKTIKUM STRUKTUR DATA (PENGENALAN BAHASA C++ BAGIAN 2)
-2. https://www.belajarcpp.com/tutorial/cpp/array/
-3. https://www.belajarcpp.com/tutorial/cpp/pointer/
+1. MODUL3 PRAKTIKUM STRUKTUR DATA (ABSTRACT DATA TYPE)
+2. https://www.geeksforgeeks.org/dsa/abstract-data-types/
 
 
