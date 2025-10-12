@@ -2,14 +2,9 @@
 <p align="center">Muhammad Faris Rachmadi - 103112400079</p>
 
 ## Dasar Teori
-Array
+Abstract Data Type (ADT) adalah sebuah tipe data beserta sekumpulan operasi dasar (primitif) terhadap tipe tersebut. ADT merupakan sebuah definisi yang bersifat statik, di mana tipe data ini dapat mengandung definisi ADT lainnya, contohnya seperti ADT Garis yang terdiri dari dua buah ADT POINT. Dalam bahasa pemrograman seperti C, TYPE pada ADT biasanya diterjemahkan menjadi struct, sedangkan PRIMITIF diimplementasikan sebagai fungsi atau prosedur. Primitif ini dikelompokkan menjadi beberapa jenis, di antaranya adalah konstruktor untuk membentuk nilai, selector untuk mengakses komponen, operator relasional untuk perbandingan, serta operasi baca/tulis untuk interaksi dengan perangkat masukan/keluaran.
 
-Array atau Larik adalah sebuah variabel yang memiliki serangkaian elemen dari jenis tipe data yang sama. Elemen-elemen tersebut dirangkai di dalam memori yang berdekatan dengan elemen lainya. konsep ini mirip seperti struct dan class yang dapat merupakan kumpulan dari variabel, perbedaan dengan mereka adalah array merupakan kumpulan variabel dengan satu indentifier dan satu tipe data yang sama, dan dalam istilah-istilah array kumpulan dari variabel tersebut adalah elemen.
-
-Pointer
-
-Setiap data atau variabel dalam sebuah program disimpan di dalam memori komputer (RAM). Memori ini bisa dibayangkan sebagai sebuah array satu dimensi yang sangat besar, di mana setiap selnya memiliki "alamat" atau "indeks" yang unik.  
-Pointer adalah sebuah tipe variabel khusus yang fungsinya bukan untuk menyimpan nilai data, melainkan untuk menyimpan alamat memori dari variabel lain. Dengan kata lain, pointer ini "menunjuk" ke lokasi di mana sebuah data disimpan.
+Implementasi ADT umumnya dipisahkan menjadi dua modul utama: file definisi/spesifikasi dan file bodi/realisasi. File pertama, yang sering disebut sebagai header (.h), berisi definisi tipe dan spesifikasi dari primitif dalam bentuk fungsi atau prosedur. File kedua, yaitu file bodi (.c atau .cpp), berisi realisasi atau kode program dari setiap primitif yang telah didefinisikan sebelumnya. Pemisahan ini memungkinkan program utama (driver) untuk berinteraksi dengan tipe data melalui antarmuka yang telah ditentukan tanpa perlu mengetahui detail implementasi internalnya.
 ## Guided
 
 ### Mahasiswa.cpp
