@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 2 <br> PENGENALAN BAHASA C++ (BAGIAN 2)
+# <h1 align="center">Laporan Praktikum Modul 3 <br> ABSTARCT DATA TYPE
 <p align="center">Muhammad Faris Rachmadi - 103112400079</p>
 
 ## Dasar Teori
