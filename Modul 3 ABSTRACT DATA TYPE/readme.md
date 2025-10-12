@@ -334,7 +334,6 @@ int main() {
 
 
 ## Referensi
-
 1. MODUL3 PRAKTIKUM STRUKTUR DATA (ABSTRACT DATA TYPE)
 2. https://www.geeksforgeeks.org/dsa/abstract-data-types/
 
