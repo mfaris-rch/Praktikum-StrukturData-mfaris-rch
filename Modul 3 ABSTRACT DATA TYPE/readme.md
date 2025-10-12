@@ -62,8 +62,8 @@ int main()
 }
 ```
 > Output
-> ![alt](output/pointer.png)
-> Program C++ ini mendemonstrasikan cara kerja pointer dengan membuat pointer p_umur yang menunjuk ke alamat memori variabel umur. Program kemudian mencetak nilai dan alamat memori variabel umur, baik secara langsung maupun melalui pointer, untuk membuktikan bahwa pointer tersebut berhasil menyimpan alamat dan dapat digunakan untuk mengakses kembali nilai aslinya.
+> ![alt](output/guided1.png)
+> Program C++ ini berfungsi sebagai sistem pengolah data akademik sederhana. Ia menggunakan sebuah struct untuk mengemas informasi seorang mahasiswa—terdiri dari NIM dan dua nilai—menjadi satu unit yang ringkas. Alur kerjanya dimulai saat program meminta pengguna untuk memberikan data input. Data ini kemudian dilewatkan ke sebuah fungsi khusus yang bertugas menghitung rata-ratanya. Setelah kalkulasi selesai, nilai rata-rata yang dihasilkan akan langsung dicetak ke terminal sebagai output akhir
 
 
 
