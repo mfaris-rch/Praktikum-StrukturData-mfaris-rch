@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 1 <br> CODE BLOCKS IDE & PENGENALAN BAHASA C++
+# <h1 align="center">Laporan Praktikum Modul 4 <br> SINGLY LINKED LIST (BAGIAN PERTAMA)
 <p align="center">Muhammad Faris Rachmadi - 103112400079</p>
 
 ## Dasar Teori
@@ -400,7 +400,5 @@ int main() {
 
 ## Referensi
 
-1. [https://en.wikipedia.org/wiki/Data_structure (diakses blablabla)](https://www.belajarcpp.com/tutorial/cpp/pengenalan-cpp/)
-2. https://rumahcoding.co.id/pengenalan-dasar-bahasa-c-c-mulai-dari-hello-world-hingga-struktur-dasar-program/
-
+1. Modul 4: Singly Linked List (Bagian Pertama) [Modul Praktikum]. Telkom University, Bandung.
 
