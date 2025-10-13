@@ -3,9 +3,13 @@
 
 ## Dasar Teori
 
-C++ adalah peluasan dan penyempurnaan dari bahasa pemrograman sebelumnya yaitu bahasa C, oleh Bjarne Stroustrup pada tahun 1980. Awal C++ mempunyai nama yaitu “C with Classes” dan berganti nama menjadi C++ pada tahun 1983. Bjarne Stroustrup membuat bahasa pemrograman C++ dengan tambahan fasilitas, yang sangat berguna pada tahun itu sampai sekarang, yaitu bahasa pemrograman yang mendukung OOP (Object Oriented Programming).
+Definisi Linked List
+Linked list adalah sebuah struktur data yang terdiri dari serangkaian elemen data yang saling terhubung atau berkait. Struktur ini memiliki sifat fleksibel, yang berarti ukurannya dapat bertambah (tumbuh) dan berkurang (mengerut) sesuai dengan kebutuhan program. Data yang dapat disimpan dalam elemen-elemen linked list bisa berupa data tunggal, seperti sebuah nama, atau data majemuk, yang merupakan kumpulan dari berbagai tipe data seperti data mahasiswa yang terdiri dari nama, NIM, dan alamat. Untuk mengimplementasikan linked list, pointer lebih sering digunakan dibandingkan array. Hal ini disebabkan karena sifat pointer yang dinamis, yang sangat cocok dengan karakteristik linked list yang fleksibel. Selain itu, karena elemen-elemen dalam linked list saling berhubungan, penggunaan pointer dianggap lebih mudah dan efisien. 
 
-C++ dirancang sebagai bias terhadap sistem pemrograman dan embedded sistem, dengan mengutamakan kinerja, kecepatan, efisiensi dan fleksibilitas penggunaan. C++ telah dan sangat berguna dalam banyak hal, seperti pembuatan aplikasi desktop, server dan performance-critical (misalnya switch telepon dan pesawat luar angkasa).
+Singly Linked List
+Singly linked list adalah salah satu model dari linked list yang paling dasar, di mana setiap elemennya hanya memiliki satu arah pointer. Setiap elemen, yang juga sering disebut sebagai node atau simpul, pada dasarnya terdiri dari dua komponen utama: 
+-Data: Bagian ini berisi informasi utama yang akan disimpan dalam elemen tersebut. 
+-Successor: Bagian ini adalah sebuah pointer (biasa disebut next) yang berfungsi sebagai penghubung dan menunjuk ke alamat memori dari elemen berikutnya dalam urutan list.
 ## Guided
 
 ### Guided 1
@@ -401,4 +405,5 @@ int main() {
 ## Referensi
 
 1. Modul 4: Singly Linked List (Bagian Pertama) [Modul Praktikum]. Telkom University, Bandung.
+2. https://www.tutorialspoint.com/cplusplus-program-to-implement-singly-linked-list
 
