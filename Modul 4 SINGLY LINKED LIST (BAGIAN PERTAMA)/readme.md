@@ -194,7 +194,7 @@ int main() {
 }
 ```
 > Output
-> ![alt](output/aritmatika.png)
+> ![alt](output/guided.png)
 > Program C++ ini adalah implementasi dari struktur data single linked list yang menyediakan serangkaian operasi dasar untuk memanipulasi daftar elemen secara dinamis. Program ini memungkinkan pengguna untuk melakukan berbagai macam fungsi melalui antarmuka menu sederhana, termasuk menyisipkan data baru di bagian depan, di bagian belakang, atau setelah elemen tertentu yang sudah ada di dalam list. Selain itu, program ini juga dilengkapi dengan fungsionalitas untuk menghapus elemen berdasarkan nilainya, memperbarui data pada elemen yang ada, serta menampilkan keseluruhan isi dari linked list untuk memverifikasi hasil dari setiap operasi yang dilakukan.
 
 ## UnGuided
@@ -323,7 +323,7 @@ int main() {
 }
 ```
 > Output
-> ![alt](output/soal1.png)
+> ![alt](output/unguided1.png)
 > Program ini merupakan implementasi sistem antrian sederhana menggunakan struktur data single linked list dalam bahasa C++. Sistem ini dirancang untuk mengelola data pembeli yang terdiri dari nama dan pesanan, dengan menerapkan prinsip FIFO (First-In, First-Out), di mana pembeli yang pertama datang akan dilayani terlebih dahulu. Pengguna dapat berinteraksi melalui menu konsol untuk melakukan tiga operasi utama: menambah pembeli baru ke akhir antrian, melayani (menghapus) pembeli dari awal antrian, dan menampilkan seluruh daftar antrian yang ada saat ini.
 
 ### Soal 2
@@ -395,7 +395,7 @@ int main() {
 }
 ```
 > Output
-> ![alt](output/soal2.png)
+> ![alt](output/unguided2.png)
 > Program C++ ini mendemonstrasikan operasi dasar pada *singly linked list* dengan membuat sebuah list sederhana berisi data `1 -> 2 -> 3`. Fungsi utamanya adalah `reverse`, yang secara iteratif membalik urutan node dalam list tersebut menggunakan tiga pointer (prev, current, next) untuk mengubah arah pointer `next` dari setiap node. Akhirnya, program ini mencetak kondisi list sebelum dan sesudah dibalik untuk menunjukkan bahwa urutannya telah berhasil diubah dari `1 -> 2 -> 3` menjadi `3 -> 2 -> 1`.
 
 ## Referensi
