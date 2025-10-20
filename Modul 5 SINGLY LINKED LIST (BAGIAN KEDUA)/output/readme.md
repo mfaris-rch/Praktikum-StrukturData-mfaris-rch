@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 4 <br> SINGLY LINKED LIST (BAGIAN KEDUA)
+# <h1 align="center">Laporan Praktikum Modul 5 <br> SINGLY LINKED LIST (BAGIAN KEDUA)
 <p align="center">Muhammad Faris Rachmadi - 103112400079</p>
 
 ## Dasar Teori
