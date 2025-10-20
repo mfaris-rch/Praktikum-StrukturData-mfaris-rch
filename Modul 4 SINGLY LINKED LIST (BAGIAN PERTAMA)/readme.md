@@ -211,21 +211,18 @@ int main() {
 
 using namespace std;
 
-// Struktur untuk Node Pembeli
 struct Node {
     string nama;
     string pesanan;
     Node* next;
 };
 
-// Kelas untuk mengelola daftar antrian
 class DaftarAntrian {
 private:
     Node* depan;
     Node* belakang;
 
 public:
-    // Constructor
     DaftarAntrian() {
         depan = nullptr;
         belakang = nullptr;
@@ -284,9 +281,8 @@ public:
     }
 };
 
-// Fungsi utama
 int main() {
-    DaftarAntrian antrian; // Menggunakan kelas DaftarAntrian
+    DaftarAntrian antrian; 
     int pilihan;
     string nama, pesanan;
 
