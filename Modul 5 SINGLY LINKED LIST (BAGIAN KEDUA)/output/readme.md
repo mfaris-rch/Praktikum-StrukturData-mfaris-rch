@@ -375,7 +375,7 @@ int main() {
 }
 ```
 > Output
-> ![alt](output/unguided1.png)
+> ![alt](output/unguied1.png)
 > Program C++ ini mengimplementasikan sistem antrian (queue) pesanan pelanggan menggunakan *linked list*. Dengan *class* `DaftarAntrian`, program ini menerapkan prinsip **First-In, First-Out melalui fungsi `tambah` (enqueue) untuk menambah data ke belakang dan `layani` (dequeue) untuk menghapus data dari depan. Program ini juga dilengkapi fungsi untuk `tampilkan` seluruh antrian dan `cariPembeli` berdasarkan nama, yang semuanya dikendalikan oleh menu interaktif di fungsi `main`.
 
 ### Soal 2
