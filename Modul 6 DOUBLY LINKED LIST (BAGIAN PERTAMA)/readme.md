@@ -256,7 +256,7 @@ int main() {
 ```
 > Output
 > ![alt](output/guided.png)
-> Program C++ ini adalah implementasi lengkap dari struktur data singly linked list (daftar tertaut tunggal) yang digunakan untuk mengelola data bilangan bulat. Program ini menyediakan fungsionalitas komprehensif untuk manipulasi list, termasuk operasi penyisipan data (di depan, di belakang, dan setelah data tertentu), penghapusan data, pembaruan (update) data, serta pencarian data. Fungsi main bertindak sebagai antarmuka pengguna berbasis menu konsol, yang menggunakan loop do-while dan switch-case untuk memungkinkan pengguna memilih operasi-operasi tersebut secara interaktif hingga pengguna memilih opsi untuk keluar.
+> Program di atas merupakan implementasi struktur data Doubly Linked List dalam bahasa C++ yang menyediakan berbagai operasi manipulasi data menggunakan menu interaktif. Setiap elemen disimpan dalam node yang memiliki pointer ke node sebelumnya (prev) dan node berikutnya (next), sehingga memungkinkan penelusuran dua arah. Program ini memiliki fungsi untuk menambahkan data di depan (insertDepan), di belakang (insertBelakang), atau setelah data tertentu (insertSetelah), serta menghapus data dari depan (hapusDepan), belakang (hapusBelakang), atau berdasarkan nilai tertentu (hapusData). Selain itu, terdapat fitur untuk memperbarui isi data (updateData) dan menampilkan isi list dari arah depan (tampilDepan) maupun belakang (tampilBelakang). Dengan menu yang interaktif, pengguna dapat dengan mudah melakukan operasi CRUD (Create, Read, Update, Delete) pada struktur data Doubly Linked List secara dinamis.
 
 ## UnGuided
 
