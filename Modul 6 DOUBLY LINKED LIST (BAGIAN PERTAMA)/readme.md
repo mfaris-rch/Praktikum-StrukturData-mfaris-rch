@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 6 <br> DOUBLY LINKED LIST (BAGIAN KEDUA)
+# <h1 align="center">Laporan Praktikum Modul 6 <br> DOUBLY LINKED LIST (BAGIAN PERTAMA)
 <p align="center">Muhammad Faris Rachmadi - 103112400079</p>
 
 ## Dasar Teori
@@ -542,11 +542,28 @@ procedure printInfo( input L : List )
 procedure insertLast(input/output L : List, input P : address )
 ```
 Buatlah implementasi ADT Doubly Linked list pada file “Doublylist.cpp” dan coba hasil implementasi ADT pada file “main.cpp”.
+> Output no 1
+> ![alt](output/soal1.png)
+> ![alt](output/soal01.png)
+
+### 2.Carilah elemen dengan nomor polisi D001 dengan membuat fungsi baru.
+fungsi findElm( L : List, x : infotype ) : address
+> Output no 2
+> ![alt](output/soal2.png)
+
+### 3.Hapus elemen dengan nomor polisi D003 dengan procedure delete.
+- procedure deleteFirst( input/output L : List, P : address )
+- procedure deleteLast( input/output L : List, P : address )
+- procedure deleteAfter( input Prec : address, input/output P : address )
+> Output no 3
+> ![alt](output/soal3.png)
+> program C++ ini berfungsi sebagai sistem manajemen data kendaraan menggunakan struktur data doubly linked list. Program ini menyediakan menu sederhana bagi pengguna untuk berinteraksi dengan daftar data, memungkinkan mereka untuk menambahkan data kendaraan baru (sekaligus mencegah duplikasi nomor polisi), mencari data berdasarkan nomor polisi, menghapus data yang ada, dan menampilkan keseluruhan daftar kendaraan yang tersimpan, dimulai dari data yang paling terakhir dimasukkan.
+
 
 
 ## Referensi
 
-1. Modul 5: Singly Linked List (Bagian Kedua) [Modul Praktikum Struktur Data]. Telkom University, Bandung.
-2. https://www.tutorialspoint.com/cplusplus-program-to-implement-singly-linked-list
+1. Modul 6: Doubly Linked List (Bagian Pertama) [Modul Praktikum Struktur Data]. Telkom University, Bandung.
+2. (https://www.programiz.com/dsa/doubly-linked-list)
 
 
