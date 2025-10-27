@@ -518,6 +518,31 @@ int main() {
     return 0;
 }
 ```
+### 1. Buatlah ADT Doubly Linked list sebagai berikut di dalam file “Doublylist.h”:
+```c++
+Type infotype : kendaraan <
+ nopol : string
+ warna : string
+ thnBuat : integer
+>
+Type address : pointer to ElmList
+Type ElmList <
+ info : infotype
+ next :address
+ prev : address
+>
+Type List <
+ First : address
+ Last : address
+>
+procedure CreateList( input/output L : List )
+function alokasi( x : infotype ) → address
+procedure dealokasi(input/output P : address )
+procedure printInfo( input L : List )
+procedure insertLast(input/output L : List, input P : address )
+```
+Buatlah implementasi ADT Doubly Linked list pada file “Doublylist.cpp” dan coba hasil implementasi ADT pada file “main.cpp”.
+
 
 ## Referensi
 
