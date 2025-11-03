@@ -280,16 +280,17 @@ int main() {
 > ![alt](soal/soal1.png)
 > Output no 1
 > ![alt](output/soal1.png)
-> ![alt](output/soal01.png)
 
 ### Soal 2 
 > ![alt](soal/soal2.png)
 > Output no 2
+
 > ![alt](output/soal2.png)
 
 ### Soal 3
 > ![alt](soal/soal3.png)
 > Output no 3
+
 > ![alt](output/soal3.png)
 > Program C++ ini adalah sebuah implementasi lengkap untuk struktur data Stack (tumpukan) yang dibuat menggunakan array dengan kapasitas 20 elemen. Program ini dibagi menjadi tiga file: stack.h yang mendefinisikan struktur data dan semua prototipe fungsi, stack.cpp yang berisi implementasi atau logika dari semua fungsi tersebut, dan main.cpp yang bertindak sebagai program utama. Selain menyediakan fungsi-fungsi dasar stack seperti push, pop, isEmpty, dan isFull, program ini juga menyertakan tiga fungsi khusus sesuai permintaan: balikStack untuk membalik urutan elemen di dalam stack, pushAscending untuk memasukkan elemen baru ke stack sambil menjaga urutannya tetap menaik, dan getInputStream untuk membaca serangkaian karakter angka dari input pengguna dan memasukkannya satu per satu ke dalam stack. File main.cpp kemudian menjalankan tiga skenario demo terpisah (menggunakan variabel S1, S2, dan S3) untuk menguji setiap fungsionalitas tersebut secara berurutan.
 
@@ -298,7 +299,7 @@ int main() {
 ## Referensi
 
 1. Modul 7: Stack [Modul Praktikum Struktur Data]. Telkom University, Bandung.
-2. (https://www.programiz.com/dsa/doubly-linked-list)
-
+2. (https://www.programiz.com/cpp-programming/stack)
+3. (https://www.geeksforgeeks.org/cpp/stack-implementation-in-cpp/)
 
 
