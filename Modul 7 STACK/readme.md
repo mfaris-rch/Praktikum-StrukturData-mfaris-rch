@@ -276,52 +276,28 @@ int main() {
     return 0;
 }
 ```
-### 1. Buatlah ADT Doubly Linked list sebagai berikut di dalam file “Doublylist.h”:
-```c++
-Type infotype : kendaraan <
- nopol : string
- warna : string
- thnBuat : integer
->
-Type address : pointer to ElmList
-Type ElmList <
- info : infotype
- next :address
- prev : address
->
-Type List <
- First : address
- Last : address
->
-procedure CreateList( input/output L : List )
-function alokasi( x : infotype ) → address
-procedure dealokasi(input/output P : address )
-procedure printInfo( input L : List )
-procedure insertLast(input/output L : List, input P : address )
-```
-Buatlah implementasi ADT Doubly Linked list pada file “Doublylist.cpp” dan coba hasil implementasi ADT pada file “main.cpp”.
+### Soal 1 
+> ![alt](soal/soal1.png)
 > Output no 1
 > ![alt](output/soal1.png)
 > ![alt](output/soal01.png)
 
-### 2.Carilah elemen dengan nomor polisi D001 dengan membuat fungsi baru.
-fungsi findElm( L : List, x : infotype ) : address
+### Soal 2 
+> ![alt](soal/soal2.png)
 > Output no 2
 > ![alt](output/soal2.png)
 
-### 3.Hapus elemen dengan nomor polisi D003 dengan procedure delete.
-- procedure deleteFirst( input/output L : List, P : address )
-- procedure deleteLast( input/output L : List, P : address )
-- procedure deleteAfter( input Prec : address, input/output P : address )
+### Soal 3
+> ![alt](soal/soal3.png)
 > Output no 3
 > ![alt](output/soal3.png)
-> program C++ ini berfungsi sebagai sistem manajemen data kendaraan menggunakan struktur data doubly linked list. Program ini menyediakan menu sederhana bagi pengguna untuk berinteraksi dengan daftar data, memungkinkan mereka untuk menambahkan data kendaraan baru (sekaligus mencegah duplikasi nomor polisi), mencari data berdasarkan nomor polisi, menghapus data yang ada, dan menampilkan keseluruhan daftar kendaraan yang tersimpan, dimulai dari data yang paling terakhir dimasukkan.
+> Program C++ ini adalah sebuah implementasi lengkap untuk struktur data Stack (tumpukan) yang dibuat menggunakan array dengan kapasitas 20 elemen. Program ini dibagi menjadi tiga file: stack.h yang mendefinisikan struktur data dan semua prototipe fungsi, stack.cpp yang berisi implementasi atau logika dari semua fungsi tersebut, dan main.cpp yang bertindak sebagai program utama. Selain menyediakan fungsi-fungsi dasar stack seperti push, pop, isEmpty, dan isFull, program ini juga menyertakan tiga fungsi khusus sesuai permintaan: balikStack untuk membalik urutan elemen di dalam stack, pushAscending untuk memasukkan elemen baru ke stack sambil menjaga urutannya tetap menaik, dan getInputStream untuk membaca serangkaian karakter angka dari input pengguna dan memasukkannya satu per satu ke dalam stack. File main.cpp kemudian menjalankan tiga skenario demo terpisah (menggunakan variabel S1, S2, dan S3) untuk menguji setiap fungsionalitas tersebut secara berurutan.
 
 
 
 ## Referensi
 
-1. Modul 6: Doubly Linked List (Bagian Pertama) [Modul Praktikum Struktur Data]. Telkom University, Bandung.
+1. Modul 7: Stack [Modul Praktikum Struktur Data]. Telkom University, Bandung.
 2. (https://www.programiz.com/dsa/doubly-linked-list)
 
 
