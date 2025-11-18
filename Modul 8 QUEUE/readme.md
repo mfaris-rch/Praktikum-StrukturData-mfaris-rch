@@ -285,6 +285,7 @@ int main() {
     return 0;
 }
 ```
+> Output
 > ![alt](ouput/soal1.png)
 > Program C++ ini mengimplementasikan ADT Queue (antrian) menggunakan array dengan mekanisme "head diam". Pada pendekatan ini, head (kepala antrian) selalu ditahan di indeks 0, sementara tail (ekor antrian) bergerak maju seiring penambahan data (enqueue). Konsekuensi utama dari metode ini adalah setiap kali terjadi operasi dequeue (pengambilan data), elemen di indeks 0 diambil, dan semua elemen sisa di belakangnya harus digeser satu per satu ke kiri agar head tetap di posisi 0, yang membuat operasi dequeue menjadi kurang efisien jika antrian sangat panjang.
 
@@ -448,8 +449,7 @@ void printInfo(Queue Q) {
 ## Referensi
 
 1. Modul 8: Queue [Modul Praktikum Struktur Data]. Telkom University, Bandung.
-2. (https://www.programiz.com/cpp-programming/stack)
-3. (https://www.geeksforgeeks.org/cpp/stack-implementation-in-cpp/)
+2. https://www.programiz.com/cpp-programming/queue
 
 
 
