@@ -120,7 +120,8 @@ procedure enqueue (input/output Q: Queue, input x: infotype)
 function dequeue (input/output Q: Queue) → infotype 
 procedure printInfo (input Q: Queue)
 
-Buatlah implementasi ADT Queue pada file “queue.cpp” dengan menerapkan mekanisme 
+```
+## Buatlah implementasi ADT Queue pada file “queue.cpp” dengan menerapkan mekanisme 
 queue  Alternatif 1 (head diam, tail bergerak).
 ```c++
 int main() { 
