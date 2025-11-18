@@ -100,7 +100,7 @@ int main() {
 }
 ```
 > Output
-> ![alt](output/guided.png)
+> ![alt](ouput/guided.png)
 > Kode C++ ini adalah sebuah program yang mengimplementasikan struktur data Queue (antrean) menggunakan array statis dengan ukuran tetap (MAX = 5). Program ini mengelola antrean menggunakan dua indeks integer, head (penanda depan) dan tail (penanda belakang), yang diinisialisasi ke -1 untuk menandakan antrean kosong. Terdapat fungsi-fungsi dasar seperti createQueue (inisialisasi), isEmpty (cek kosong), isFull (cek penuh saat tail di MAX-1), enqueue (menambah elemen di tail), dan dequeue (menghapus elemen dari head). Implementasi dequeue pada kode ini menggunakan metode pergeseran elemen (shifting): setelah elemen di head diambil, semua elemen sisa di belakangnya digeser satu posisi ke depan, dan nilai tail dikurangi satu. Fungsi main kemudian mendemonstrasikan penggunaan antrean ini dengan melakukan beberapa kali operasi enqueue dan dequeue sambil mencetak isi antrean ke layar.
 ## UnGuided
 
@@ -285,7 +285,7 @@ int main() {
     return 0;
 }
 ```
-> ![alt](output/soal1.png)
+> ![alt](ouput/soal1.png)
 > Program C++ ini mengimplementasikan ADT Queue (antrian) menggunakan array dengan mekanisme "head diam". Pada pendekatan ini, head (kepala antrian) selalu ditahan di indeks 0, sementara tail (ekor antrian) bergerak maju seiring penambahan data (enqueue). Konsekuensi utama dari metode ini adalah setiap kali terjadi operasi dequeue (pengambilan data), elemen di indeks 0 diambil, dan semua elemen sisa di belakangnya harus digeser satu per satu ke kiri agar head tetap di posisi 0, yang membuat operasi dequeue menjadi kurang efisien jika antrian sangat panjang.
 
 
@@ -353,7 +353,7 @@ void printInfo(Queue Q) {
 }
 ```
 > Output
-> ![alt](output/soal2.png)
+> ![alt](ouput/soal2.png)
 > Program C++ ini mengimplementasikan ADT Queue menggunakan array dengan mekanisme "head bergerak dan tail bergerak" secara linear. Pada metode ini, enqueue akan menggerakkan tail ke kanan dan dequeue juga akan menggerakkan head ke kanan, sehingga tidak memerlukan pergeseran elemen yang lambat. Meskipun operasi enqueue dan dequeue sangat cepat, implementasi ini memiliki kelemahan signifikan yaitu boros memori; slot array yang telah ditinggalkan oleh head tidak dapat digunakan kembali, sehingga antrian bisa cepat dianggap 'penuh' saat tail mencapai akhir array, meskipun di bagian depannya masih banyak ruang kosong.
 
 
@@ -439,7 +439,7 @@ void printInfo(Queue Q) {
 }
 ```
 > Output
-> ![alt](output/soal3.png)
+> ![alt](ouput/soal3.png)
 > Program C++ ini mengimplementasikan ADT Queue (Alternatif 3), yang dikenal sebagai Circular Queue atau "antrian berputar". Ini adalah metode berbasis array yang paling efisien karena head dan tail dapat bergerak melintasi batas akhir array dan kembali lagi ke indeks 0, seolah-olah array tersebut melingkar. Dengan memanfaatkan operasi modulo (%) untuk menentukan posisi berikutnya, implementasi ini memanfaatkan semua slot array yang tersedia secara maksimal, menghindari pemborosan ruang yang terjadi di Alternatif 2 dan operasi pergeseran yang lambat di Alternatif 1.
 
 
@@ -447,7 +447,7 @@ void printInfo(Queue Q) {
 
 ## Referensi
 
-1. Modul 7: Stack [Modul Praktikum Struktur Data]. Telkom University, Bandung.
+1. Modul 8: Queue [Modul Praktikum Struktur Data]. Telkom University, Bandung.
 2. (https://www.programiz.com/cpp-programming/stack)
 3. (https://www.geeksforgeeks.org/cpp/stack-implementation-in-cpp/)
 
