@@ -285,26 +285,163 @@ int main() {
     return 0;
 }
 ```
-> ![alt](output/soal3.png)
-> Program C++ ini adalah sebuah implementasi lengkap untuk struktur data Stack (tumpukan) yang dibuat menggunakan array dengan kapasitas 20 elemen. Program ini dibagi menjadi tiga file: stack.h yang mendefinisikan struktur data dan semua prototipe fungsi, stack.cpp yang berisi implementasi atau logika dari semua fungsi tersebut, dan main.cpp yang bertindak sebagai program utama. Selain menyediakan fungsi-fungsi dasar stack seperti push, pop, isEmpty, dan isFull, program ini juga menyertakan tiga fungsi khusus sesuai permintaan: balikStack untuk membalik urutan elemen di dalam stack, pushAscending untuk memasukkan elemen baru ke stack sambil menjaga urutannya tetap menaik, dan getInputStream untuk membaca serangkaian karakter angka dari input pengguna dan memasukkannya satu per satu ke dalam stack. File main.cpp kemudian menjalankan tiga skenario demo terpisah (menggunakan variabel S1, S2, dan S3) untuk menguji setiap fungsionalitas tersebut secara berurutan.
-
-### Soal 1 
-> ![alt](soal/soal1.png)
-> Output no 1
 > ![alt](output/soal1.png)
+> Program C++ ini mengimplementasikan ADT Queue (antrian) menggunakan array dengan mekanisme "head diam". Pada pendekatan ini, head (kepala antrian) selalu ditahan di indeks 0, sementara tail (ekor antrian) bergerak maju seiring penambahan data (enqueue). Konsekuensi utama dari metode ini adalah setiap kali terjadi operasi dequeue (pengambilan data), elemen di indeks 0 diambil, dan semua elemen sisa di belakangnya harus digeser satu per satu ke kiri agar head tetap di posisi 0, yang membuat operasi dequeue menjadi kurang efisien jika antrian sangat panjang.
+
 
 ### Soal 2 
-> ![alt](soal/soal2.png)
-> Output no 2
+Buatlah implementasi ADT Queue pada file “queue.cpp” dengan menerapkan mekanisme 
+queue  Alternatif 2 (head bergerak, tail bergerak). 
+### queue.cpp(alternatif 2)
+```C++
+#include "queue.h"
 
+void CreateQueue(Queue &Q) {
+    Head(Q) = -1;
+    Tail(Q) = -1;
+}
+
+bool isEmpty(Queue Q) {
+    return Head(Q) == -1;
+}
+
+bool isFull(Queue Q) {
+    return Tail(Q) == (MaxEl - 1);
+}
+
+void enqueue(Queue &Q, Infotype x) {
+    if (isFull(Q)) {
+    } else {
+        if (isEmpty(Q)) {
+            Head(Q) = 0;
+        }
+        Tail(Q)++;
+        Info(Q)[Tail(Q)] = x;
+    }
+}
+
+Infotype dequeue(Queue &Q) {
+    Infotype x;
+    
+    if (isEmpty(Q)) {
+        return -999;
+    } else {
+        x = Info(Q)[Head(Q)];
+        
+        Head(Q)++;
+        
+        if (Head(Q) > Tail(Q)) {
+            CreateQueue(Q);
+        }
+        
+        return x;
+    }
+}
+
+void printInfo(Queue Q) {
+    cout << Head(Q) << "\t-\t" << Tail(Q) << "\t! ";
+    
+    if (isEmpty(Q)) {
+        cout << "empty queue";
+    } else {
+        cout << ": ";
+        for (int i = Head(Q); i <= Tail(Q); i++) {
+            cout << Info(Q)[i] << " ";
+        }
+    }
+    cout << endl;
+}
+```
+> Output
 > ![alt](output/soal2.png)
+> Program C++ ini mengimplementasikan ADT Queue menggunakan array dengan mekanisme "head bergerak dan tail bergerak" secara linear. Pada metode ini, enqueue akan menggerakkan tail ke kanan dan dequeue juga akan menggerakkan head ke kanan, sehingga tidak memerlukan pergeseran elemen yang lambat. Meskipun operasi enqueue dan dequeue sangat cepat, implementasi ini memiliki kelemahan signifikan yaitu boros memori; slot array yang telah ditinggalkan oleh head tidak dapat digunakan kembali, sehingga antrian bisa cepat dianggap 'penuh' saat tail mencapai akhir array, meskipun di bagian depannya masih banyak ruang kosong.
+
 
 ### Soal 3
-> ![alt](soal/soal3.png)
-> Output no 3
+Buatlah implementasi ADT Queue pada file “queue.cpp” dengan menerapkan mekanisme 
+queue  Alternatif 3 (head dan tail berputar) 
+### queue.cpp(alternatif 3)
+```C++
+#include "queue.h"
 
+void CreateQueue(Queue &Q) {
+    Head(Q) = -1;
+    Tail(Q) = -1;
+}
+
+bool isEmpty(Queue Q) {
+    return Head(Q) == -1;
+}
+
+int nbElmt(Queue Q) {
+    if (isEmpty(Q)) {
+        return 0;
+    } else if (Tail(Q) >= Head(Q)) {
+        return Tail(Q) - Head(Q) + 1;
+    } else {
+        return MaxEl - Head(Q) + Tail(Q) + 1;
+    }
+}
+
+bool isFull(Queue Q) {
+    return nbElmt(Q) == MaxEl;
+}
+
+void enqueue(Queue &Q, Infotype x) {
+    if (isFull(Q)) {
+    } else {
+        if (isEmpty(Q)) {
+            Head(Q) = 0;
+            Tail(Q) = 0;
+        } else {
+            Tail(Q) = (Tail(Q) + 1) % MaxEl;
+        }
+        Info(Q)[Tail(Q)] = x;
+    }
+}
+
+Infotype dequeue(Queue &Q) {
+    Infotype x;
+    
+    if (isEmpty(Q)) {
+        return -999;
+    } else {
+        x = Info(Q)[Head(Q)];
+        
+        if (Head(Q) == Tail(Q)) {
+            CreateQueue(Q);
+        } else {
+            Head(Q) = (Head(Q) + 1) % MaxEl;
+        }
+        
+        return x;
+    }
+}
+
+void printInfo(Queue Q) {
+    cout << Head(Q) << "\t-\t" << Tail(Q) << "\t! ";
+    
+    if (isEmpty(Q)) {
+        cout << "empty queue";
+    } else {
+        cout << ": ";
+        
+        int i = Head(Q);
+        int count = nbElmt(Q);
+        
+        while (count > 0) {
+            cout << Info(Q)[i] << " ";
+            i = (i + 1) % MaxEl;
+            count--;
+        }
+    }
+    cout << endl;
+}
+```
+> Output
 > ![alt](output/soal3.png)
-> Program C++ ini adalah sebuah implementasi lengkap untuk struktur data Stack (tumpukan) yang dibuat menggunakan array dengan kapasitas 20 elemen. Program ini dibagi menjadi tiga file: stack.h yang mendefinisikan struktur data dan semua prototipe fungsi, stack.cpp yang berisi implementasi atau logika dari semua fungsi tersebut, dan main.cpp yang bertindak sebagai program utama. Selain menyediakan fungsi-fungsi dasar stack seperti push, pop, isEmpty, dan isFull, program ini juga menyertakan tiga fungsi khusus sesuai permintaan: balikStack untuk membalik urutan elemen di dalam stack, pushAscending untuk memasukkan elemen baru ke stack sambil menjaga urutannya tetap menaik, dan getInputStream untuk membaca serangkaian karakter angka dari input pengguna dan memasukkannya satu per satu ke dalam stack. File main.cpp kemudian menjalankan tiga skenario demo terpisah (menggunakan variabel S1, S2, dan S3) untuk menguji setiap fungsionalitas tersebut secara berurutan.
+> Program C++ ini mengimplementasikan ADT Queue (Alternatif 3), yang dikenal sebagai Circular Queue atau "antrian berputar". Ini adalah metode berbasis array yang paling efisien karena head dan tail dapat bergerak melintasi batas akhir array dan kembali lagi ke indeks 0, seolah-olah array tersebut melingkar. Dengan memanfaatkan operasi modulo (%) untuk menentukan posisi berikutnya, implementasi ini memanfaatkan semua slot array yang tersedia secara maksimal, menghindari pemborosan ruang yang terjadi di Alternatif 2 dan operasi pergeseran yang lambat di Alternatif 1.
+
 
 
 
