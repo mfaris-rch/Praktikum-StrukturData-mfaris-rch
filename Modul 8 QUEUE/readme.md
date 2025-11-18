@@ -106,7 +106,7 @@ int main() {
 
 ## soal 1
 Buatlah ADT Queue menggunakan ARRAY sebagai berikut di dalam file “queue.h”: 
-```c++
+```pseudocode
 Type infotype: integer 
 Type Queue:  < 
 info : array [5] of infotype {index array dalam C++ 
@@ -121,8 +121,7 @@ function dequeue (input/output Q: Queue) → infotype
 procedure printInfo (input Q: Queue)
 
 ```
-## Buatlah implementasi ADT Queue pada file “queue.cpp” dengan menerapkan mekanisme 
-queue  Alternatif 1 (head diam, tail bergerak).
+ Buatlah implementasi ADT Queue pada file `queue.cpp` dengan menerapkan mekanisme queue **Alternatif 1 (head diam, tail bergerak)**.
 ```c++
 int main() { 
 cout << "Hello World" << endl; 
