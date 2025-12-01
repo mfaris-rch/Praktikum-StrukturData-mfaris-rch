@@ -5,7 +5,7 @@
 Tree (pohon) adalah struktur data non-linear yang bersifat hierarkis, menggambarkan hubungan one-to-many antara elemen-elemennya menyerupai struktur pohon terbalik dengan satu elemen puncak yang disebut akar (root). Berbeda dengan struktur data linear seperti array atau stack, tree terdiri dari sekumpulan simpul (node) yang terhubung oleh sisi (edge), di mana setiap simpul dapat memiliki simpul induk (parent) dan nol atau lebih simpul anak (child); simpul yang tidak memiliki anak disebut daun (leaf). Jenis tree yang paling fundamental dan sering dipelajari adalah Binary Tree (Pohon Biner), di mana setiap simpul dibatasi maksimal memiliki dua anak (anak kiri dan anak kanan), yang memungkinkan operasi penyimpanan dan penelusuran data (traversal)—seperti PreOrder, InOrder, dan PostOrder—dilakukan secara lebih efisien dibandingkan struktur linear.
 ## Guided
 
-### Guided 1
+### Guided 
 ```c++
 #include <iostream>
 #include <string>
@@ -184,7 +184,7 @@ int main() {
 }
 ```
 > Output
-> ![alt](ouput/guided.png)
+> ![alt](output/guided.png)
 > Program C++ ini mengimplementasikan struktur data Binary Search Tree (BST) lengkap yang memungkinkan pengelolaan data dinamis melalui operasi penyisipan (`insert`), pencarian (`search`), penghapusan (`hapus`), dan pembaruan (`update`) nilai. Logika utamanya memanfaatkan fungsi rekursif untuk menempatkan angka yang lebih kecil di cabang kiri dan angka yang lebih besar di cabang kanan, serta menangani kasus penghapusan node yang kompleks (terutama node dengan dua anak) dengan menggantinya menggunakan nilai terkecil dari sub-pohon kanan. Selain itu, program ini menyediakan fitur pembaruan data dengan mekanisme menghapus nilai lama lalu menyisipkan nilai baru untuk menjaga keterurutan pohon, dan diakhiri dengan fungsi `main` yang mendemonstrasikan seluruh operasi tersebut serta menampilkannya melalui metode penelusuran (*traversal*) PreOrder, InOrder, dan PostOrder.
 ## UnGuided
 
@@ -408,8 +408,8 @@ int main() {
 
 ```
 > Output
-> ![alt](ouput/unguided.png)
-> Program C++ ini mengimplementasikan struktur data Binary Search Tree (BST) berbasis linked list yang disusun secara modular dalam tiga file (bstree.h, bstree.cpp, dan main.cpp) untuk memisahkan definisi, logika, dan eksekusi program. Kode ini menyediakan fungsi utama insertNode yang menyusun data secara otomatis—nilai lebih kecil ke kiri dan lebih besar ke kanan—serta fitur penelusuran (traversal) meliputi PreOrder dan PostOrder untuk menampilkan isi pohon dalam berbagai urutan. Selain operasi dasar, program ini juga menerapkan fungsi rekursif untuk menghitung statistik pohon, seperti jumlah total node, penjumlahan seluruh nilai data, dan kedalaman maksimum pohon, yang kemudian didemonstrasikan dalam fungsi main menggunakan sekumpulan data sampel untuk memverifikasi logika dan struktur pohon yang terbentuk.
+> ![alt](output/unguided.png)
+> Program C++ ini mengimplementasikan struktur data Binary Search Tree (BST) berbasis linked list yang disusun secara modular dalam tiga file (bstree.h, bstree.cpp, dan main.cpp) untuk memisahkan definisi, logika, dan eksekusi program. Kode ini menyediakan fungsi utama insertNode yang menyusun data secara otomatis nilai lebih kecil ke kiri dan lebih besar ke kanan serta fitur penelusuran (traversal) meliputi PreOrder dan PostOrder untuk menampilkan isi pohon dalam berbagai urutan. Selain operasi dasar, program ini juga menerapkan fungsi rekursif untuk menghitung statistik pohon, seperti jumlah total node, penjumlahan seluruh nilai data, dan kedalaman maksimum pohon, yang kemudian didemonstrasikan dalam fungsi main menggunakan sekumpulan data sampel untuk memverifikasi logika dan struktur pohon yang terbentuk.
 
 
 
