@@ -408,16 +408,17 @@ int main() {
 
 ```
 > Output
-> ![alt](ouput/soal3.png)
-> Program C++ ini mengimplementasikan ADT Queue (Alternatif 3), yang dikenal sebagai Circular Queue atau "antrian berputar". Ini adalah metode berbasis array yang paling efisien karena head dan tail dapat bergerak melintasi batas akhir array dan kembali lagi ke indeks 0, seolah-olah array tersebut melingkar. Dengan memanfaatkan operasi modulo (%) untuk menentukan posisi berikutnya, implementasi ini memanfaatkan semua slot array yang tersedia secara maksimal, menghindari pemborosan ruang yang terjadi di Alternatif 2 dan operasi pergeseran yang lambat di Alternatif 1.
+> ![alt](ouput/unguided.png)
+> Program C++ ini mengimplementasikan struktur data Binary Search Tree (BST) berbasis linked list yang disusun secara modular dalam tiga file (bstree.h, bstree.cpp, dan main.cpp) untuk memisahkan definisi, logika, dan eksekusi program. Kode ini menyediakan fungsi utama insertNode yang menyusun data secara otomatis—nilai lebih kecil ke kiri dan lebih besar ke kanan—serta fitur penelusuran (traversal) meliputi PreOrder dan PostOrder untuk menampilkan isi pohon dalam berbagai urutan. Selain operasi dasar, program ini juga menerapkan fungsi rekursif untuk menghitung statistik pohon, seperti jumlah total node, penjumlahan seluruh nilai data, dan kedalaman maksimum pohon, yang kemudian didemonstrasikan dalam fungsi main menggunakan sekumpulan data sampel untuk memverifikasi logika dan struktur pohon yang terbentuk.
 
 
 
 
 ## Referensi
 
-1. Modul 8: Queue [Modul Praktikum Struktur Data]. Telkom University, Bandung.
-2. https://www.programiz.com/cpp-programming/queue
+1. Modul 10: TREE(BAGIAN PERTAMA [Modul Praktikum Struktur Data]. Telkom University, Bandung.
+2. https://www.nblognlife.com/2014/12/tree-pada-c-tree-awal.html
+3. https://www.softwaretestinghelp.com/trees-in-cpp/
 
 
 
