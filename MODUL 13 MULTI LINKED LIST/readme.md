@@ -127,7 +127,7 @@ int main()
 ```
 > Output
 > ![alt](output/guided.png)
-> Program C++ ini mengimplementasikan struktur data Binary Search Tree (BST) lengkap yang memungkinkan pengelolaan data dinamis melalui operasi penyisipan (`insert`), pencarian (`search`), penghapusan (`hapus`), dan pembaruan (`update`) nilai. Logika utamanya memanfaatkan fungsi rekursif untuk menempatkan angka yang lebih kecil di cabang kiri dan angka yang lebih besar di cabang kanan, serta menangani kasus penghapusan node yang kompleks (terutama node dengan dua anak) dengan menggantinya menggunakan nilai terkecil dari sub-pohon kanan. Selain itu, program ini menyediakan fitur pembaruan data dengan mekanisme menghapus nilai lama lalu menyisipkan nilai baru untuk menjaga keterurutan pohon, dan diakhiri dengan fungsi `main` yang mendemonstrasikan seluruh operasi tersebut serta menampilkannya melalui metode penelusuran (*traversal*) PreOrder, InOrder, dan PostOrder.
+> Program C++ tersebut mengimplementasikan struktur data multi linked list sederhana yang terdiri dari node induk (ParentNode) dan node anak (ChildNode), di mana setiap induk dapat memiliki daftar anak yang terhubung secara berantai. Fungsi createParent dan createChild digunakan untuk membuat node baru, sedangkan insertParent menambahkan node induk ke dalam daftar induk, dan insertChild menambahkan node anak ke induk tertentu berdasarkan informasi yang dicari. Fungsi printAll menampilkan seluruh isi daftar dengan format induk diikuti oleh anak-anaknya. Pada fungsi main, program mendemonstrasikan proses pembuatan dua node induk, kemudian menambahkan beberapa node anak ke masing-masing induk, dan akhirnya mencetak hasil struktur data yang terbentuk sehingga terlihat hubungan hierarki antara induk dan anak.
 ## UnGuided
 
 ## soal 2
@@ -633,9 +633,8 @@ int main() {
 }
 ```
 > Output
-> ![alt](output/unguided.png)
-> Program C++ ini mengimplementasikan struktur data Binary Search Tree (BST) berbasis linked list yang disusun secara modular dalam tiga file (bstree.h, bstree.cpp, dan main.cpp) untuk memisahkan definisi, logika, dan eksekusi program. Kode ini menyediakan fungsi utama insertNode yang menyusun data secara otomatis nilai lebih kecil ke kiri dan lebih besar ke kanan serta fitur penelusuran (traversal) meliputi PreOrder dan PostOrder untuk menampilkan isi pohon dalam berbagai urutan. Selain operasi dasar, program ini juga menerapkan fungsi rekursif untuk menghitung statistik pohon, seperti jumlah total node, penjumlahan seluruh nilai data, dan kedalaman maksimum pohon, yang kemudian didemonstrasikan dalam fungsi main menggunakan sekumpulan data sampel untuk memverifikasi logika dan struktur pohon yang terbentuk.
-
+> ![alt](output/soal2.png)
+> Program C++ ini mengimplementasikan struktur data Multi Linked List dengan mekanisme Doubly Linked List untuk memodelkan hubungan hierarkis antara data Pegawai (sebagai list induk) dan Anak (sebagai list anak/sub-list) . Kode ini menyediakan fungsi lengkap untuk manajemen memori dan manipulasi data, meliputi operasi alokasi, pencarian, serta penyisipan dan penghapusan elemen di berbagai posisi (awal, akhir, dan setelah elemen tertentu) pada kedua level list, dengan fitur logika khusus di mana penghapusan data pegawai akan secara otomatis memicu penghapusan seluruh data anak yang terkait untuk mencegah kebocoran memori .
 
 
 ### Soal 3 
@@ -883,8 +882,8 @@ int main() {
 }
 ```
 > Output
-> ![alt](output/unguided.png)
-> Program C++ ini mengimplementasikan struktur data Binary Search Tree (BST) berbasis linked list yang disusun secara modular dalam tiga file (bstree.h, bstree.cpp, dan main.cpp) untuk memisahkan definisi, logika, dan eksekusi program. Kode ini menyediakan fungsi utama insertNode yang menyusun data secara otomatis nilai lebih kecil ke kiri dan lebih besar ke kanan serta fitur penelusuran (traversal) meliputi PreOrder dan PostOrder untuk menampilkan isi pohon dalam berbagai urutan. Selain operasi dasar, program ini juga menerapkan fungsi rekursif untuk menghitung statistik pohon, seperti jumlah total node, penjumlahan seluruh nilai data, dan kedalaman maksimum pohon, yang kemudian didemonstrasikan dalam fungsi main menggunakan sekumpulan data sampel untuk memverifikasi logika dan struktur pohon yang terbentuk.
+> ![alt](output/soal3.png)
+> Program ini menerapkan ADT Circular Single Linked List untuk mengelola data mahasiswa yang terdiri dari nama, NIM, jenis kelamin, dan IPK, di mana pointer elemen terakhir kembali menunjuk ke elemen pertama sehingga membentuk siklus tertutup . Implementasi ini mencakup 11 fungsi primitif wajib seperti pembuatan list, operasi insert dan delete (First, Last, After), serta fungsi pencarian elemen berdasarkan NIM, yang kemudian diuji dalam fungsi utama melalui skenario penyisipan data mahasiswa secara acak dan penyisipan spesifik setelah data mahasiswa lain yang ditemukan.
 
 
 
@@ -893,10 +892,9 @@ int main() {
 
 ## Referensi
 
-1. Modul 10: TREE(BAGIAN PERTAMA [Modul Praktikum Struktur Data]. Telkom University, Bandung.
-2. https://www.nblognlife.com/2014/12/tree-pada-c-tree-awal.html
-3. https://www.softwaretestinghelp.com/trees-in-cpp/
-
+1. Modul 13: MULTI LINKED LIST [Modul Praktikum Struktur Data]. Telkom University, Bandung.
+2. https://www.geeksforgeeks.org/dsa/multilevel-linked-list/
+3. https://www.programiz.com/dsa/circular-linked-list
 
 
 
